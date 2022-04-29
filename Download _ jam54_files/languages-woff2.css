@@ -108,9 +108,9 @@
 @font-face {font-family: "Chips-W26-Normal"; src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/e526922d-4fe2-4e4d-834d-6b62ebd244da.woff") format("woff");}
 @font-face {font-family: "Alef-Regular"; src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/alef-regular.woff") format("woff");}
 @font-face {font-family: "OpenSansHebrewCondensed-Regular"; src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/opensans-hebrew-condensed-regular.woff") format("woff");}
-@font-face {font-family: 'almoni-dl-aaa-300'; font-weight: 300; src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/almoni-dl-aaa-300.woff") format("woff");}
-@font-face {font-family: 'almoni-dl-aaa-400'; font-weight: 400; font-style: normal; src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/almoni-dl-aaa-400.woff") format("woff");}
-@font-face {font-family: 'almoni-dl-aaa-700'; src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/almoni-dl-aaa-700.woff") format("woff");}
+@font-face {font-family: 'almoni-dl-aaa-300'; font-weight: 300; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Almoni/v1/almoni-light-aaa.woff2") format("woff2");}
+@font-face {font-family: 'almoni-dl-aaa-400'; font-weight: 400; font-style: normal; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Almoni/v1/almoni-regular-aaa.woff2") format("woff2");}
+@font-face {font-family: 'almoni-dl-aaa-700'; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Almoni/v1/almoni-bold-aaa.woff2") format("woff2");}
 @font-face {font-family: 'asimon-aaa-400'; src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/asimon-aaa-400.woff") format("woff");}
 @font-face {font-family: 'atlas-aaa-500'; src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/atlas-aaa-500.woff") format("woff");}
 @font-face {font-family: 'mixtape-aaa-400'; src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/mixtape-aaa-400.woff") format("woff");}
@@ -215,3 +215,29 @@
 @font-face {font-family: "Nimbus-Sans-TW05Con"; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Nimbus/v1/NimbusSansW05-Regular.woff2") format("woff2");}
 @font-face {font-family: "Bodoni-W05-Poster"; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/PosterBodoni/v1/PosterBodoniBTWGL4W05-Roman.woff2") format("woff2");}
 @font-face {font-family: "Proxima-N-W05-Reg"; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/ProximNova/v1/ProximaNovaW05-Regular.woff2") format("woff2");}
+@font-face {font-family: "Fraunces_120pt-Light"; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Fraunces/v1/Fraunces_120pt-Light.ttf") format("truetype");}
+@font-face {font-family: "Fraunces_120pt-Light"; font-style: italic; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Fraunces/v1/Fraunces_120pt-LightItalic.ttf") format("truetype");}
+@font-face {font-family: "Fraunces_120pt-Light"; font-weight: 700; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Fraunces/v1/Fraunces_120pt-Regular.ttf") format("truetype");}
+@font-face {font-family: "Fraunces_120pt-Light"; font-weight: 700; font-style: italic; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Fraunces/v1/Fraunces_120pt-Italic.ttf") format("truetype");}
+@font-face {font-family: "Fraunces_120pt-SemiBold"; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Fraunces/v1/Fraunces_120pt-SemiBold.ttf") format("truetype");}
+@font-face {font-family: "Fraunces_120pt-SemiBold"; font-style: italic; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Fraunces/v1/Fraunces_120pt-SemiBoldItalic.ttf") format("truetype");}
+@font-face {font-family: "Fraunces_120pt-SemiBold"; font-weight: 700; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Fraunces/v1/Fraunces_120pt-Bold.ttf") format("truetype");}
+@font-face {font-family: "Fraunces_120pt-SemiBold"; font-weight: 700; font-style: italic; src: url("//static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/Fraunces/v1/Fraunces_120pt-BoldItalic.ttf") format("truetype");}
+@font-face {font-family: "Heebo-Light"; src: url("//fonts.gstatic.com/s/heebo/v15/NGSpv5_NC0k9P_v6ZUCbLRAHxK1E1yysd0mm.woff2") format("woff2");}
+@font-face {font-family: "Heebo-Light"; font-weight: 700; src: url("//fonts.gstatic.com/s/heebo/v15/NGSpv5_NC0k9P_v6ZUCbLRAHxK1EiSysd0mm.woff2") format("woff2");}
+@font-face {font-family: "Heebo-Medium"; src: url("//fonts.gstatic.com/s/heebo/v15/NGSpv5_NC0k9P_v6xZUCbLRAHxK1Euyysd0mm.woff2") format("woff2");}
+@font-face {font-family: "Heebo-Medium"; font-weight: 700; src: url("//fonts.gstatic.com/s/heebo/v15/NGSpv5_NC0k9P_v6ZUCbLRAHxK1Ebiusd0mm.woff2") format("woff2");}
+@font-face {font-family: "Rubik-Light"; src: url("//fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYi1VQ.woff2") format("woff2");}
+@font-face {font-family: "Rubik-Light"; font-style: italic; src: url("//fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8sDE0U1.woff2") format("woff2");}
+@font-face {font-family: "Rubik-Light"; font-weight: 700; src: url("//fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-B4i1VQ.woff2") format("woff2");}
+@font-face {font-family: "Rubik-Light"; font-weight: 700; font-style: italic; src: url("//fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8tdE0U1.woff2") format("woff2");}
+@font-face {font-family: "Rubik-Medium"; src: url("//fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-NYi1VQ.woff2") format("woff2");}
+@font-face {font-family: "Rubik-Medium"; font-style: italic; src: url("//fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8tvE0U1.woff2") format("woff2");}
+@font-face {font-family: "Rubik-Medium"; font-weight: 700; src: url("//fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-1VQ.woff2") format("woff2");}
+@font-face {font-family: "Rubik-Medium"; font-weight: 700; font-style: italic; src: url("//fonts.gstatic.com/s/rubik/v14/iJWbBXyIfDnIV7nEt3KSJbVDV49rz8u6FEU1.woff2") format("woff2");}
+@font-face {font-family: "Assistant-Light"; src: url("//fonts.gstatic.com/s/assistant/v8/2sDPZGJYnIjSi6H75xkZZE1I0yCmYzzQtrhnEGQ.woff2") format("woff2");}
+@font-face {font-family: "Assistant-Light"; font-weight: 700; src: url("//fonts.gstatic.com/s/assistant/v8/2sDPZGJYnIjSi6H75xkZZE1I0yCmYzzQtuZnEGQ.woff2") format("woff2");}
+@font-face {font-family: "Assistant-SemiBold"; src: url("//fonts.gstatic.com/s/assistant/v8/2sDPZGJYnIjSi6H75xkZZE1I0yCmYzzQtjhgEGQ.woff2") format("woff2");}
+@font-face {font-family: "Assistant-SemiBold"; font-weight: 700; src: url("//fonts.gstatic.com/s/assistant/v8/2sDPZGJYnIjSi6H75xkZZE1I0yCmYzzQtmZgEGQ.woff2") format("woff2");}
+@font-face {font-family: "Karantina-Light"; src: url("//fonts.gstatic.com/s/karantina/v1/buExpo24ccnh31GVMABxXCgv_fRP.woff2") format("woff2");}
+@font-face {font-family: "Karantina-Light"; font-weight: 700; src: url("//fonts.gstatic.com/s/karantina/v1/buE0po24ccnh31GVMAB59Qo6.woff2") format("woff2");}

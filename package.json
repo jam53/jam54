@@ -1,0 +1,28 @@
+{
+    "name": "jam54",
+    "browserslist": [
+        "> 0.5%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "version": "0.1.0",
+    "description": "",
+    "keywords": "",
+    "license": "LGPL-3.0-only",
+    "author": "jam54",
+    "scripts": {
+        "build": "rimraf ./bin && parcel build index.html --public-url ./ --dist-dir ./bin",
+        "dev": "rimraf ./dist && parcel index.html --dist-dir ./dist --open",
+        "start": "npm run build && npm run dev",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "tailwindcss": "^3.1.2"
+    },
+    "devDependencies": {
+        "@parcel/packager-raw-url": "^2.0.0",
+        "@parcel/transformer-webmanifest": "^2.0.0",
+        "parcel": "^2.0.0",
+        "rimraf": "^3.0.0"
+    }
+}

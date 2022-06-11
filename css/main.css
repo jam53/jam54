@@ -196,7 +196,7 @@ ul {
  * Hide visually and from screen readers
  */
 
-.hidden,
+.invisible,
 [hidden] {
   display: none !important;
 }

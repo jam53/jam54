@@ -6,7 +6,9 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -104,67 +106,75 @@ textarea {
     font-family: "Rubik";
     src: url("../fonts/Rubik/static/Rubik-Regular.ttf");
 }
+@font-face {
+    font-family: "Nunito Sans";
+    src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+}
+@font-face {
+    font-family: "Nunito Sans";
+    src: url("../fonts/Nunito_Sans/NunitoSans-ExtraLight.ttf");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Nunito Sans";
+    src: url("../fonts/Nunito_Sans/NunitoSans-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/Nunito/static/Nunito-Regular.ttf");
+}
 
 body {
     background-color: var(--background-color);
-    font-family: "Rubik", sans-serif;
+    font-family: Rubik, sans-serif;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: var(--secondary-background-color);
-    overflow: hidden;
+.root {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
-/* Style the links inside the navigation bar */
-.topnav {
-    text-align: center;
-    padding: 14px 16px;
+/*Make the webpage take up the entire width of the screen, if the page is being viewed on a mobile device*/
+@media only screen and (max-width: 1100px) {
+    .root {
+        width: 90%;
+    }
 }
 
-.topnav a{
-    color: #f2f2f2;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-}
+@layer base {
+    h1 {
+        @apply text-slate-50 underline underline-offset-[15px] decoration-2 text-5xl font-bold mb-7
+    }
 
-/* Place the navbar at the bottom of the page, and make it stick */
-.bottomnav {
-    background-color: var(--third-background-color);
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+    h2 {
+        @apply text-slate-50 text-4xl font-light
+    }
 
-/* Style the links inside the navigation bar */
-.bottomnav {
-    text-align: left;
-    padding: 0 16px;
-}
-
-.bottomnav p {
-    margin: 10px
-}
-
-.bottomnav a:hover {
-    color: var(--secondary-color);
-}
-
-a{
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: bold;
+    p {
+        @apply text-slate-50 text-2xl font-extralight pl-3
+    }
 }
 
 h1 {
-    color: white;
+    font-family: Rubik, sans-serif;
 }
 
+h2 {
+    font-family: "Nunito Sans", sans-serif;
+    text-align: center;
+}
 
 p {
-    color: white;
+    font-family: "Nunito Sans", sans-serif
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 em {

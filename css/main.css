@@ -169,7 +169,7 @@ body {
     }
 
     .whiteBorderButton {
-        @apply text-white hover:text-white border border-white hover:bg-white duration-300 focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-white dark:text-white dark:hover:text-black dark:hover:bg-white dark:focus:ring-blue-800
+        @apply text-white hover:text-white border border-white hover:bg-white duration-300 focus:ring-4 focus:outline-none focus:ring-white font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-white dark:text-white dark:hover:text-black dark:hover:bg-white dark:focus:ring-blue-800
         text-3xl font-thin gap-1.5 my-3 justify-center inline-flex items-center
     }
 }
@@ -215,7 +215,7 @@ ul {
     text-align: left;
 }
 
-.buttonDropShadow {
+.dropShadow {
     text-shadow: 0 0 32px black;
     -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .3));
     filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .3));

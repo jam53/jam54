@@ -151,7 +151,7 @@ body {
 
 @layer base {
     h1 {
-        @apply text-slate-50 underline underline-offset-[15px] decoration-2 text-5xl font-bold mb-7
+        @apply text-slate-50 underline underline-offset-[15px] decoration-2 text-5xl font-bold mb-7 leading-snug
     }
 
     h2 {

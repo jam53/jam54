@@ -107,6 +107,11 @@ textarea {
     src: url("../fonts/Rubik/static/Rubik-Regular.ttf");
 }
 @font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik/static/Rubik-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
     font-family: "Nunito Sans";
     src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
 }
@@ -154,7 +159,18 @@ body {
     }
 
     p {
-        @apply text-slate-50 text-2xl font-extralight pl-3
+        @apply text-slate-50 text-2xl font-extralight pl-3 my-2
+    }
+
+    .blueToPurpleButton {
+        @apply p-10 text-white rounded-xl transition-all duration-500 bg-gradient-to-tl to-purple-600 via-blue-500 from-green-600 bg-size-200 bg-pos-0 hover:bg-pos-100
+        font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2
+        text-4xl font-light gap-1.5 my-3 justify-center inline-flex items-center
+    }
+
+    .whiteBorderButton {
+        @apply text-white hover:text-white border border-white hover:bg-white duration-300 focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-white dark:text-white dark:hover:text-black dark:hover:bg-white dark:focus:ring-blue-800
+        text-3xl font-thin gap-1.5 my-3 justify-center inline-flex items-center
     }
 }
 
@@ -197,6 +213,17 @@ blockquote {
 ul {
     color: white;
     text-align: left;
+}
+
+.buttonDropShadow {
+    text-shadow: 0 0 32px black;
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .3));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .3));
+}
+
+.whiteBorderButton {
+    font-style: italic;
+    font-family: "Nunito Sans", sans-serif;
 }
 /* ==========================================================================
    Helper classes

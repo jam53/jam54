@@ -7,7 +7,15 @@ module.exports = {
   theme: {
     extend: {
         colors: {
-            'navbar-blue': '#2196f3'
+            'navbar-blue': '#2196f3',
+            'zelf-background-color': '#282a2e',
+        },
+        backgroundSize: {
+            'size-200': '200% 200%',
+        },
+        backgroundPosition: {
+            'pos-0': '0% 0%',
+            'pos-100': '100% 100%',
         },
     },
   },

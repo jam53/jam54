@@ -9,6 +9,7 @@ module.exports = {
         colors: {
             'navbar-blue': '#2196f3',
             'zelf-background-color': '#282a2e',
+            'lightgrey-blue': '#4e86b0',
         },
         backgroundSize: {
             'size-200': '200% 200%',

@@ -95,6 +95,7 @@ textarea {
     --secondary-color-r: 114;
     --secondary-color-g: 137;
     --secondary-color-b: 218;
+    --tertiary-color: #708aef;
     --background-color: rgb(40, 42, 46);
     --secondary-background-color: rgb(45, 47, 51);
     --accent-background-color: rgb(37, 38, 41);
@@ -129,7 +130,14 @@ textarea {
     font-family: "Nunito";
     src: url("../fonts/Nunito/static/Nunito-Regular.ttf");
 }
-
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/Nunito/static/Nunito-ExtraLight.ttf");
+}
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/Nunito/static/Nunito-Light.ttf");
+}
 body {
     background-color: var(--background-color);
     font-family: Rubik, sans-serif;
@@ -172,10 +180,15 @@ body {
         @apply text-white hover:text-white border border-white hover:bg-white duration-300 focus:ring-4 focus:outline-none focus:ring-white font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-white dark:text-white dark:hover:text-black dark:hover:bg-white dark:focus:ring-blue-800
         text-3xl font-thin gap-1.5 my-3 justify-center inline-flex items-center
     }
+
+    .whiteShadowBold {
+        @apply font-normal text-3xl
+    }
 }
 
 h1 {
     font-family: Rubik, sans-serif;
+
 }
 
 h2 {
@@ -185,6 +198,15 @@ h2 {
 
 p {
     font-family: "Nunito Sans", sans-serif
+}
+
+blockquote p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.whiteShadowBold {
+    text-shadow:rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
+    font-family: "Rubik", sans-serif;
 }
 
 a {
@@ -201,13 +223,10 @@ em {
 
 blockquote {
     margin: 0;
-}
-
-blockquote {
     padding: 5px 10px 5px 15px;
     background: var(--box-background-color);
     border-radius: 5px;
-    border-left: 3px solid var(--secondary-color);
+    border-left: 3px solid var(--tertiary-color);
 }
 
 ul {

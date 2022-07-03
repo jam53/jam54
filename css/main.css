@@ -184,6 +184,14 @@ body {
     .whiteShadowBold {
         @apply font-normal text-3xl
     }
+
+    .zelful {
+        @apply  text-white text-2xl font-extralight pl-3
+    }
+
+    .zelfli {
+        @apply  text-white text-2xl font-extralight
+    }
 }
 
 h1 {
@@ -232,6 +240,17 @@ blockquote {
 ul {
     color: white;
     text-align: left;
+}
+
+.zelful {
+    font-family: "Nunito Sans", sans-serif
+}
+
+.zelfli {
+    list-style-type: disc;
+    display: list-item;
+    margin-left: 50px;
+    font-family: "Nunito Sans", sans-serif
 }
 
 .dropShadow {

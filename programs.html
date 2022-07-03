@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Jam54 | Download</title>
+    <title>Jam54 | Programs</title>
     <meta name="description" content="Software development and game development by jam54.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,7 +17,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
     <meta name="theme-color" content="#fafafa">
@@ -47,7 +46,7 @@
                     <a href="/games.html" class="block font-medium py-2 pr-4 pl-3 text-xl text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-sky-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Games</a>
                 </li>
                 <li>
-                    <a href="/programs.html" class="block font-medium py-2 pr-4 pl-3 text-xl text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-sky-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Programs</a>
+                    <a href="/programs.html" class="block py-2 pr-4 pl-3 text-xl text-white bg-sky-700 rounded md:bg-transparent md:text-navbar-blue md:p-0 dark:text-white underline underline-offset-4 decoration-4" aria-current="page">Programs</a>
                 </li>
                 <li>
                     <a href="#" class="block font-medium py-2 pr-4 pl-3 text-xl text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-sky-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
@@ -57,58 +56,127 @@
     </div>
 </nav>
 
-
 <div id="root" class="root">
-    <h1>
-        The Jam54 Launcher
-    </h1>
-    <p>
-        The Jam54 Launcher is used to install and update all the software developed by Jam54. This ensures that everything stays up-to-date and makes it easier for the user by having all the programs in one unified place.
-    </p>
+    <div class="grid grid-cols-2 gap-1">
+        <div style="background: transparent" class="grid place-items-center">
+            <img class="rounded-tl-lg object-cover" style="height: 100%" src="img/Flash.svg" alt="AstroRun Logo">
+        </div>
+        <div class="bg-lightgrey-blue rounded-tr-lg p-7">
+            <h1>
+                Flash
+            </h1>
+            <p>
+                Flash is a program that allows one to create small quizzes. Where the user can choose questions from a variety of ready-made templates.
+            </p>
 
-    <a href="https://github.com/jamhorn/vamos/releases/latest/download/Setup.exe" class="blueToPurpleButton dropShadow" style="width: 100%;">
-        <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-        Download
-    </a>
+            <ul class="zelful">
+                Including but not limited to:
+                <li class="zelfli">Multiple Choice Questions</li>
+                <li class="zelfli">Multiple Answer Questions</li>
+                <li class="zelfli">Open Questions</li>
+                <li class="zelfli">Open Questions (numbers only)</li>
+                <li class="zelfli">True/False Questions</li>
+            </ul>
+            <br>
+            <a href="/download.html" class="whiteBorderButton dropShadow" style="width: 100%;">
+                <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download
+            </a>
+        </div>
 
-    <a href="/download.html#FAQ" class="whiteBorderButton dropShadow rounded-lg" style="width: 100%">
-        Frequently Asked Questions
-    </a>
+        <div style="background: #ececec; padding: 0 30px 0 30px" class="grid place-items-center">
+            <img class="object-cover" style="height: 100%; filter: invert(1); object-fit: contain" src="img/ImageSearcher.png" alt="AstroRun Logo">
+        </div>
+        <div class="bg-lightgrey-blue p-7">
+            <h1>
+                ImageSearcher
+            </h1>
+            <p>
+                ImageSearcher is written in C# and searches for a certain image inside a video. Once the image is found, the program outputs the timestamps at which the image was found.
+            </p>
+            <br>
+            <a href="https://youtu.be/-p1rkt8zxvk" target="_blank" class="whiteBorderButton dropShadow" style="width: 100%;">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" clip-rule="evenodd" /></svg>
+                Watch Example
+            </a>
+            <a href="/download.html" class="whiteBorderButton dropShadow" style="width: 100%;">
+                <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download
+            </a>
+        </div>
 
-    <img src="/img/Jam54LauncherProductViewShowcase-P100.jpg" alt="Jam54 Launcher Preview" class="rounded-lg mt-5 mb-8 dropShadow">
+        <div style="background: transparent" class="grid place-items-center">
+            <img class="object-cover" style="height: 100%; object-fit: contain" src="img/AutoEditor.png" alt="AstroRun Logo">
+        </div>
+        <div class="bg-lightgrey-blue p-7">
+            <h1>
+                AutoEditor
+            </h1>
+            <p>
+                AutoEditor, is written in C# and automatically edits videos, using image detection.
+            </p>
+            <br>
+            <a href="https://youtu.be/s26Tq07oLmo?t=76" target="_blank" class="whiteBorderButton dropShadow" style="width: 100%;">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" clip-rule="evenodd" /></svg>
+                Watch Example
+            </a>
+            <a href="/download.html" class="whiteBorderButton dropShadow" style="width: 100%;">
+                <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download
+            </a>
+        </div>
 
-    <br> <br>
+        <div style="background: #f0f0f0; padding: 30px" class="grid place-items-center">
+            <img class="object-cover" style="height: 100%; object-fit: contain" src="img/DGCTimer.png" alt="AstroRun Logo">
+        </div>
+        <div class="bg-lightgrey-blue p-7">
+            <h1>
+                DGCTimer
+            </h1>
+            <p>
+                DGCTimer, is written in C# and counts down from a given amount of minutes and seconds. It is also able to play a sound when the timer ends.
+            </p>
+            <br>
+            <a href="/download.html" class="whiteBorderButton dropShadow" style="width: 100%;">
+                <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download
+            </a>
+        </div>
 
-    <section id="FAQ">
-    <h1>
-        Frequently Asked Questions
-    </h1>
+        <div style="background: white; padding: 5px" class="grid place-items-center">
+            <img class="object-cover" style="height: 100%; object-fit: contain" src="img/WToI.png" alt="AstroRun Logo">
+        </div>
+        <div class="bg-lightgrey-blue p-7">
+            <h1>
+                WToI
+            </h1>
+            <p>
+                WToI, is written in Python and manipulates a given string. IToW is used to demanipulate the string.
+            </p>
+            <br>
+            <a href="/download.html" class="whiteBorderButton dropShadow" style="width: 100%;">
+                <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download
+            </a>
+        </div>
 
-    <p class="whiteShadowBold">
-        Q: Why does my browser mark the installer as 'dangerous'?
-    </p>
-    <blockquote>
-        <p>
-            This is because the browser’s built-in security tools detected that this file doesn't get downloaded often.
-            And therefore might be unsafe. You can bypass this warning by clicking on 'discard'.
-        </p>
-    </blockquote>
-
-    <br>
-
-    <p class="whiteShadowBold">
-        Q: Why does Windows Defender SmartScreen prevent the installer from running?
-    </p>
-    <blockquote>
-        <p>
-            Whenever you download an application, Windows SmartScreen will check the file that you downloaded against a list of well known programs.
-        </p>
-        <p>
-            The more often an application is downloaded, the higher its reputation becomes. However, if an application hasn’t been downloaded very often.
-            Windows prevents the application from starting and warns the user that the application may be dangerous.
-            You can bypass this warning by clicking on more info, and selecting 'Run anyway'.
-        </p>
-    </blockquote>
+        <div style="background: white; padding: 5px" class="grid place-items-center rounded-bl-lg">
+            <img class="object-cover rounded-bl-lg" style="height: 100%; object-fit: contain" src="img/IToW.png" alt="AstroRun Logo">
+        </div>
+        <div class="bg-lightgrey-blue p-7 rounded-br-lg">
+            <h1>
+                IToW
+            </h1>
+            <p>
+                IToW, is written in Python and demanipulates a given string. WToI is used to manipulate the string.
+            </p>
+            <br>
+            <a href="/download.html" class="whiteBorderButton dropShadow" style="width: 100%;">
+                <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download
+            </a>
+        </div>
+    </div>
 
     <br> <br>
 </div>
@@ -140,6 +208,7 @@
 
 
 <div class="hidden">
+    <a href="/download.html"></a>
 </div>
 
 <script type="module" src="js/vendor/modernizr-3.11.2.min.js"></script>

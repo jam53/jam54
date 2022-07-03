@@ -186,11 +186,19 @@ body {
     }
 
     .zelful {
-        @apply  text-white text-2xl font-extralight pl-3
+        @apply text-white text-2xl font-extralight pl-3
     }
 
     .zelfli {
-        @apply  text-white text-2xl font-extralight
+        @apply text-white text-2xl font-extralight
+    }
+
+    .cutout-text-container {
+        @apply rounded-lg
+    }
+
+    .cutout-text {
+        @apply text-8xl
     }
 }
 
@@ -262,6 +270,29 @@ ul {
 .whiteBorderButton {
     font-style: italic;
     font-family: "Nunito Sans", sans-serif;
+}
+
+.cutout-text-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.cutout-text {
+    background: white;
+    color: black;
+    font-weight: bold;
+    margin: 0px auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    mix-blend-mode: screen;
 }
 /* ==========================================================================
    Helper classes

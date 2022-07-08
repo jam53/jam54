@@ -210,7 +210,7 @@ body {
 
 h1 {
     font-family: Rubik, sans-serif;
-
+    word-break: break-word;
 }
 
 h2 {

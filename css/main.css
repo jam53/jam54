@@ -198,13 +198,7 @@ body {
     }
 
     .cutout-text {
-        @apply text-8xl
-    }
-
-    @media only screen and (max-width: 1100px) {
-        .cutout-text {
-            @apply text-7xl;
-        }
+        @apply text-4xl lg:text-8xl
     }
 }
 

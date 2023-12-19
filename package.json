@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "postcss": "^8.4.31",
-        "tailwindcss": "^3.3.6"
+        "tailwindcss": "^3.3.7"
     },
     "devDependencies": {
         "vite": "^5.0.10",

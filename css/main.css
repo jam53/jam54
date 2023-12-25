@@ -291,6 +291,42 @@ ul {
         width: 80%;
     }
 }
+
+/*https://codepen.io/MartijnCuppens/pen/NWNdOBR?editors=1100*/
+/*The image containers*/
+.img-container {
+   width: 100%;
+   position: relative;
+   overflow: hidden;
+}
+
+/*Add a pseudo element to keep the aspect ratio*/
+.img-container::after {
+   content: "";
+   display: block;
+   /*padding-bottom: calc(900% / 16);*/
+}
+
+/*Stretch the images over the container and keep them contained*/
+.img-container > * {
+   position: absolute;
+   top: var(--offset, 0);
+   left: var(--offset, 0);
+   width: calc(100% - 2 * var(--offset, 0px));
+   height: calc(100% - 2 * var(--offset, 0px));
+   object-fit: contain;
+}
+
+/*Blur the background image and cover the whole container*/
+/*Use the negative blur value as offset to prevent the blur*/
+/*from mixing with the document background color*/
+.img-blur {
+   --blur: 20px;
+   --offset: 0px; /*calc(-1 * var(--blur));*/
+   object-fit: cover;
+   filter: blur(var(--blur));
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

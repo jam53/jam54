@@ -9,11 +9,12 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "flowbite": "^2.3.0",
         "postcss": "^8.4.35",
         "tailwindcss": "^3.4.3"
     },
     "devDependencies": {
-        "vite": "^5.2.7",
-        "rimraf": "^5.0.5"
+        "rimraf": "^5.0.5",
+        "vite": "^5.2.7"
     }
 }

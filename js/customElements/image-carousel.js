@@ -4,6 +4,8 @@ class ImageCarousel extends HTMLElement
 {
     static observedAttributes = ["width", "height", "styleClasses"]
 
+    adjustedHeight = false;
+
     constructor()
     {
         super();
@@ -17,15 +19,23 @@ class ImageCarousel extends HTMLElement
 
         if (this.getAttribute("height") === null)
         {
+            this.adjustedHeight = false
             this.calculateAndSetHeight();
+        }
+        else
+        {
+            this.adjustedHeight = true;
         }
     }
 
-    calculateAndSetHeight()
+    calculateAndSetHeight(maxWidth)
     {
-        const parentWidth = this.parentNode.clientWidth;
-        const parentComputedStye = getComputedStyle(this.parentNode);
-        const maxWidth = parentWidth - parseFloat(parentComputedStye.paddingLeft) - parseFloat(parentComputedStye.paddingRight);
+        if (maxWidth === undefined)
+        {
+            const parentWidth = this.parentNode.clientWidth;
+            const parentComputedStye = getComputedStyle(this.parentNode);
+            maxWidth = parentWidth - parseFloat(parentComputedStye.paddingLeft) - parseFloat(parentComputedStye.paddingRight);
+        }
 
         let maxHeight = 0;
 
@@ -49,16 +59,16 @@ class ImageCarousel extends HTMLElement
     connectedCallback()
     {
         this.innerHTML = `
-<div class="relative w-full" data-carousel="static">
+<div class="relative w-full" data-carousel="static" onclick="event.stopPropagation()">
     <!-- Carousel wrapper -->
-    <div class="relative overflow-hidden ${this.getAttribute("styleClasses")}" style="width: ${this.getAttribute("width")}; height: ${this.getAttribute("height")}">
+    <div id="imagesContainer" class="relative overflow-hidden ${this.getAttribute("styleClasses")}" style="width: ${this.getAttribute("width")}; height: ${this.getAttribute("height")}">
     ${this.images.map(image => {
         return `
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="${image.src}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt=${image.alt}>
             </div>
         `;
-    })}
+    }).join("")}
     </div>
     <!-- Slider indicators -->
     <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
@@ -98,6 +108,12 @@ image-carousel .dark\\:bg-gray-800\\/50:is(.dark *), image-carousel .bg-gray-800
 }
 </style>
         `;
+
+        if (this.adjustedHeight === false)
+        {
+            this.adjustedHeight = true;
+            this.calculateAndSetHeight(parseFloat(getComputedStyle(document.getElementById("imagesContainer")).width));
+        }
     }
 }
 

@@ -66,26 +66,37 @@ class ImageCarousel extends HTMLElement
         return `
             <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide ${index}" data-carousel-slide-to="${index}"></button>
         `;
-    })}
+    }).join("")}
     </div>
     <!-- Slider controls -->
     <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/60 group-hover:bg-gray-600/80  group-focus:outline-none transition-all">
-            <svg class="w-4 h-4 text-gray-400 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-neutral-700/60 group-hover:bg-neutral-600/80  group-focus:outline-none transition-all">
+            <svg class="w-4 h-4 text-neutral-400 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
             </svg>
             <span class="sr-only">Previous</span>
         </span>
     </button>
     <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/60 group-hover:bg-gray-600/80  group-focus:outline-none transition-all">
-            <svg class="w-4 h-4 text-gray-400 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-neutral-800/60 group-hover:bg-neutral-600/80  group-focus:outline-none transition-all">
+            <svg class="w-4 h-4 text-neutral-400 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
             </svg>
             <span class="sr-only">Next</span>
         </span>
     </button>
 </div>
+
+<style>
+image-carousel .dark\\:bg-gray-800:is(.dark *), image-carousel .bg-gray-800, image-carousel .hover\\:bg-white:hover, image-carousel .dark\\:hover\\:bg-gray-800:hover:is(.dark *) {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255,255,255,0.9);
+}
+
+image-carousel .dark\\:bg-gray-800\\/50:is(.dark *), image-carousel .bg-gray-800\\/50 {
+    background-color: rgba(255,255,255,0.25);
+}
+</style>
         `;
     }
 }

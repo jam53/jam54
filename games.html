@@ -43,6 +43,86 @@
                 Each world is based around a certain theme and has its own unique intractable objects such as trampolines, falling spikes, enemies, turrets and much more. Along the way, the adventurer can collect various items which can be used to purchase new packages and accessories.
             </p>
 
+            <div
+                    id="FullScreenAstroRunPicturesContainer"
+                    style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
+                    class="transition-opacity duration-300"
+                    onclick="this.style.opacity = '0'"
+            >
+                <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow rounded-lg">
+                    <img src="/img/AstroRun/Level4WaterBox_Effort6_Quality_85.webp" alt="Level 4 water box">
+                    <img src="/img/AstroRun/Level1FireworkPortal_Effort6_Quality_85.webp" alt="Level 1 firework portal">
+                    <img src="/img/AstroRun/Level1Spring_Effort6_Quality_85.webp" alt="Level 1 spring">
+                    <img src="/img/AstroRun/Level2Death_Effort6_Quality_85.webp" alt="Level 2 death">
+                    <img src="/img/AstroRun/LevelSelection_Effort6_Quality_85.webp" alt="Level selection menu">
+                    <img src="/img/AstroRun/Level1Water_Effort6_Quality_85.webp" alt="Level 1 water">
+                    <img src="/img/AstroRun/Level1WatervalCheckpoint_Effort6_Quality_85.webp" alt="Level 1 waterval checkpoint">
+                    <img src="/img/AstroRun/MainMenu_Effort6_Quality_85.webp" alt="Main menu">
+                    <img src="/img/AstroRun/Level2CheckPoint_Effort6_Quality_85.webp" alt="Level 2 checkpoint">
+                    <img src="/img/AstroRun/Level3SpikeTurret_Effort6_Quality_85.webp" alt="Level 3 spike turret">
+                    <img src="/img/AstroRun/Level3Turret_Effort6_Quality_85.webp" alt="Level 3 turret">
+                </image-carousel>
+            </div>
+            <script>
+                const picturesContainer = document.getElementById('FullScreenAstroRunPicturesContainer');
+
+                function hideElement()
+                {
+                    if (picturesContainer.style.opacity === '0')
+                    {
+                        picturesContainer.style.visibility = 'hidden';
+                        picturesContainer.style.opacity = "-1";
+                    }
+                }
+
+                picturesContainer.addEventListener('transitionend', hideElement);
+            </script>
+            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenAstroRunPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenAstroRunPicturesContainer').style.opacity = '1'">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
+                Pictures
+            </button>
+
+            <div
+                    id="FullScreenAstroRunLeaderboardsContainer"
+                    style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
+                    class="transition-opacity duration-300"
+                    onclick="this.style.opacity = '0'"
+            >
+                <image-carousel width="min(45vh, 70vw)" styleClasses="dropShadow rounded-lg">
+                    <img src="/img/AstroRun/Leaderboards/Level1_Effort6_Quality_85.webp" alt="Level 1 leaderboard">
+                    <img src="/img/AstroRun/Leaderboards/Level2_Effort6_Quality_85.webp" alt="Level 2 leaderboard">
+                    <img src="/img/AstroRun/Leaderboards/Level3_Effort6_Quality_85.webp" alt="Level 3 leaderboard">
+                    <img src="/img/AstroRun/Leaderboards/Level4_Effort6_Quality_85.webp" alt="Level 4 leaderboard">
+                    <img src="/img/AstroRun/Leaderboards/Level5_Effort6_Quality_85.webp" alt="Level 5 leaderboard">
+                    <img src="/img/AstroRun/Leaderboards/Level6_Effort6_Quality_85.webp" alt="Level 6 leaderboard">
+                    <img src="/img/AstroRun/Leaderboards/Level7_Effort6_Quality_85.webp" alt="Level 7 leaderboard">
+                    <img src="/img/AstroRun/Leaderboards/Level8_Effort6_Quality_85.webp" alt="Level 8 leaderboard">
+                    <img src="/img/AstroRun/Leaderboards/Level9_Effort6_Quality_85.webp" alt="Level 9 leaderboard">
+                    <img src="/img/AstroRun/Leaderboards/Level10_Effort6_Quality_85.webp" alt="Level 10 leaderboard">
+                    <img src="/img/AstroRun/Leaderboards/Achievements_Effort6_Quality_85.webp" alt="Achievements">
+                </image-carousel>
+            </div>
+            <script>
+                const leaderboardsContainer = document.getElementById('FullScreenAstroRunLeaderboardsContainer');
+
+                function hideElement()
+                {
+                    if (leaderboardsContainer.style.opacity === '0')
+                    {
+                        leaderboardsContainer.style.visibility = 'hidden';
+                        leaderboardsContainer.style.opacity = "-1";
+                    }
+                }
+
+                leaderboardsContainer.addEventListener('transitionend', hideElement);
+            </script>
+            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenAstroRunLeaderboardsContainer').style.visibility = 'visible';document.getElementById('FullScreenAstroRunLeaderboardsContainer').style.opacity = '1'">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+                Leaderboards
+            </button>
+
             <a href="./astrorun-patchnotes.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
@@ -132,6 +212,7 @@
 <script type="module" src="js/index.js"></script>
 <script type="module" src="js/customElements/top-navbar.js"></script>
 <script type="module" src="js/customElements/bottom-navbar.js"></script>
+<script type="module" src="js/customElements/image-carousel.js"></script>
 
 </body>
 </html>

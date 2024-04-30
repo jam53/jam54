@@ -64,18 +64,18 @@
                 </image-carousel>
             </div>
             <script>
-                const picturesContainer = document.getElementById('FullScreenAstroRunPicturesContainer');
+                const astroRunPicturesContainer = document.getElementById('FullScreenAstroRunPicturesContainer');
 
                 function hideElement()
                 {
-                    if (picturesContainer.style.opacity === '0')
+                    if (astroRunPicturesContainer.style.opacity === '0')
                     {
-                        picturesContainer.style.visibility = 'hidden';
-                        picturesContainer.style.opacity = "-1";
+                        astroRunPicturesContainer.style.visibility = 'hidden';
+                        astroRunPicturesContainer.style.opacity = "-1";
                     }
                 }
 
-                picturesContainer.addEventListener('transitionend', hideElement);
+                astroRunPicturesContainer.addEventListener('transitionend', hideElement);
             </script>
             <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenAstroRunPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenAstroRunPicturesContainer').style.opacity = '1'">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
@@ -158,6 +158,41 @@
             <p class="animated-element">
                 I realised that this project's scope was way behond what I could do on my own. So after a final update in December 2020, the development of Stelexo ended.
             </p>
+
+            <div
+                    id="FullScreenStelexoPicturesContainer"
+                    style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
+                    class="transition-opacity duration-300"
+                    onclick="this.style.opacity = '0'"
+            >
+                <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow">
+                    <img src="/img/PatchnotesBackgrounds/StelexoPatchNotes.png" alt="Level 4 water box">
+                    <img src="/img/Stelexo/Waterval_Quality60_Effort10.avif" alt="Level 4 water box">
+                    <img src="/img/Stelexo/SneeuwBerg_Quality55_Effort10.avif" alt="Level 4 water box">
+                    <img src="/img/Stelexo/Groen_Quality50_Effort10.avif" alt="Level 4 water box">
+                    <img src="/img/Stelexo/MountainBirdsEyeView_Quality75_Effort10.avif" alt="Level 4 water box">
+                    <img src="/img/Stelexo/GreenCloseup_Quality70_Effort10.avif" alt="Level 4 water box">
+                    <img src="/img/Stelexo/SterDünya_Closed_Alpha1.1_Quality75_Effort9.avif" alt="Level 4 water box">
+                </image-carousel>
+            </div>
+            <script>
+                const stelexoPicturesContainer = document.getElementById('FullScreenStelexoPicturesContainer');
+
+                function hideElement()
+                {
+                    if (stelexoPicturesContainer.style.opacity === '0')
+                    {
+                        stelexoPicturesContainer.style.visibility = 'hidden';
+                        stelexoPicturesContainer.style.opacity = "-1";
+                    }
+                }
+
+                stelexoPicturesContainer.addEventListener('transitionend', hideElement);
+            </script>
+            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenStelexoPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenStelexoPicturesContainer').style.opacity = '1'">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
+                Pictures
+            </button>
 
             <a href="./stelexo-patchnotes.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">

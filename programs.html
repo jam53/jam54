@@ -91,6 +91,40 @@
                 Gain an insight in your Sky playtime & other statistics. By analyzing the screenshots you took during your journey through the world of Sky: Children Of The Light.
             </p>
             <br>
+            <div
+                    id="FullScreenSkyScreenshotStatsPicturesContainer"
+                    style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
+                    class="transition-opacity duration-300"
+                    onclick="this.style.opacity = '0'"
+            >
+                <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow rounded-lg">
+                    <img src="/img/SkyScreenshotStats/GeneralStats_Quality80_Effort10.avif" alt="General stats">
+                    <img src="/img/SkyScreenshotStats/ScreenshotsPerHour_Quality80_Effort10.avif" alt="Amount Of Screenshots Per Hour Of The Day">
+                    <img src="/img/SkyScreenshotStats/HoursPerDay_Quality85_Effort10.avif" alt="Amount Of Hours Played Per Day Of The Week">
+                    <img src="/img/SkyScreenshotStats/ScreenshotsPerMonth_Quality80_Effort10.avif" alt="Amount Of Screenshots Per Month Of The Year">
+                    <img src="/img/SkyScreenshotStats/ScreenshotsPerDayOverPlayHistory_Quality80_Effort10.avif" alt="Amount Of Screenshots Per Day Over Your Entire Play History">
+                    <img src="/img/SkyScreenshotStats/ScreenshotsPerDay_Quality85_Effort8.avif" alt="Amount Of Screenshots Per Day Of The Week">
+                    <img src="/img/SkyScreenshotStats/MinutesPerDayOverPlayHistory_Quality80_Effort10.avif" alt="Amount Of Minutes Played Per Day Over Your Entire Play History">
+                </image-carousel>
+            </div>
+            <script>
+                const picturesContainer = document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer');
+
+                function hideElement()
+                {
+                    if (picturesContainer.style.opacity === '0')
+                    {
+                        picturesContainer.style.visibility = 'hidden';
+                        picturesContainer.style.opacity = "-1";
+                    }
+                }
+
+                picturesContainer.addEventListener('transitionend', hideElement);
+            </script>
+            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer').style.opacity = '1'">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
+                Pictures
+            </button>
             <a href="https://jam53.github.io/sky-screenshot-stats/" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 18 18">
                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>

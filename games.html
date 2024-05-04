@@ -43,6 +43,32 @@
                 Each world is based around a certain theme and has its own unique intractable objects such as trampolines, falling spikes, enemies, turrets and much more. Along the way, the adventurer can collect various items which can be used to purchase new packages and accessories.
             </p>
 
+            <button id="astroRunMediaDropdownButton" class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('astroRunMediaButtonsHolder').style.removeProperty('display'); this.style.display = 'none'">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
+                Media
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="1em" width="1em" style="position: absolute; right: 0.25em">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </button>
+            <div id="astroRunMediaButtonsHolder" class="mb-2" style="display: none">
+                <button class="whiteBorderButton dropShadow m-0" style="width: 100%;" onclick="document.getElementById('astroRunMediaDropdownButton').style.removeProperty('display'); document.getElementById('astroRunMediaButtonsHolder').style.display = 'none'">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
+                    Media
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="1em" width="1em" style="position: absolute; right: 0.25em">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </button>
+                <a href="https://www.youtube.com/watch?v=BgA4Y9DwvOE&list=PLHruLsU8WUD7LtQZtPg9GZBAuOpLTU_nV&index=4" class="whiteBorderButton dropShadow m-0" style="width: 100%; border-top: none; border-bottom: dashed 1px white">
+                    Video
+                </a>
+                <button class="whiteBorderButton dropShadow m-0" style="width: 100%; border-top: none; border-bottom: dashed 1px white" onclick="document.getElementById('FullScreenAstroRunPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenAstroRunPicturesContainer').style.opacity = '1'">
+                    Pictures
+                </button>
+                <button class="whiteBorderButton dropShadow m-0" style="width: 100%; border-top: none" onclick="document.getElementById('FullScreenAstroRunLeaderboardsContainer').style.visibility = 'visible';document.getElementById('FullScreenAstroRunLeaderboardsContainer').style.opacity = '1'">
+                    Leaderboards
+                </button>
+            </div>
+
             <div
                     id="FullScreenAstroRunPicturesContainer"
                     style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
@@ -77,10 +103,6 @@
 
                 astroRunPicturesContainer.addEventListener('transitionend', hideElement);
             </script>
-            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenAstroRunPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenAstroRunPicturesContainer').style.opacity = '1'">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
-                Pictures
-            </button>
 
             <div
                     id="FullScreenAstroRunLeaderboardsContainer"
@@ -116,12 +138,6 @@
 
                 leaderboardsContainer.addEventListener('transitionend', hideElement);
             </script>
-            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenAstroRunLeaderboardsContainer').style.visibility = 'visible';document.getElementById('FullScreenAstroRunLeaderboardsContainer').style.opacity = '1'">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                </svg>
-                Leaderboards
-            </button>
 
             <a href="./astrorun-patchnotes.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">

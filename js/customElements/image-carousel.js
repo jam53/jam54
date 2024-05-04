@@ -20,7 +20,16 @@ class ImageCarousel extends HTMLElement
         if (this.getAttribute("height") === null)
         {
             this.adjustedHeight = false
-            this.calculateAndSetHeight();
+            // Wait for all images to load before calculating and setting height
+            Promise.all(this.images.map(image => new Promise(resolve => {
+                if (image.complete) {
+                    resolve();
+                } else {
+                    image.addEventListener('load', resolve);
+                }
+            }))).then(() => {
+                this.calculateAndSetHeight();
+            });
         }
         else
         {

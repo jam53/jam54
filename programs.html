@@ -57,18 +57,18 @@
                 </image-carousel>
             </div>
             <script>
-                const picturesContainer = document.getElementById('FullScreenTakmaPicturesContainer');
+                const takmaPicturesContainer = document.getElementById('FullScreenTakmaPicturesContainer');
 
                 function hideElement()
                 {
-                    if (picturesContainer.style.opacity === '0')
+                    if (takmaPicturesContainer.style.opacity === '0')
                     {
-                        picturesContainer.style.visibility = 'hidden';
-                        picturesContainer.style.opacity = "-1";
+                        takmaPicturesContainer.style.visibility = 'hidden';
+                        takmaPicturesContainer.style.opacity = "-1";
                     }
                 }
 
-                picturesContainer.addEventListener('transitionend', hideElement);
+                takmaPicturesContainer.addEventListener('transitionend', hideElement);
             </script>
             <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenTakmaPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenTakmaPicturesContainer').style.opacity = '1'">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
@@ -92,10 +92,10 @@
             </p>
             <br>
             <div
-                    id="FullScreenSkyScreenshotStatsPicturesContainer"
-                    style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
-                    class="transition-opacity duration-300"
-                    onclick="this.style.opacity = '0'"
+                id="FullScreenSkyScreenshotStatsPicturesContainer"
+                style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
+                class="transition-opacity duration-300"
+                onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow rounded-lg">
                     <img src="/img/SkyScreenshotStats/GeneralStats_Quality80_Effort10.avif" alt="General stats">
@@ -108,18 +108,18 @@
                 </image-carousel>
             </div>
             <script>
-                const picturesContainer = document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer');
+                const skyScreenshotStatsPicturesContainer = document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer');
 
                 function hideElement()
                 {
-                    if (picturesContainer.style.opacity === '0')
+                    if (skyScreenshotStatsPicturesContainer.style.opacity === '0')
                     {
-                        picturesContainer.style.visibility = 'hidden';
-                        picturesContainer.style.opacity = "-1";
+                        skyScreenshotStatsPicturesContainer.style.visibility = 'hidden';
+                        skyScreenshotStatsPicturesContainer.style.opacity = "-1";
                     }
                 }
 
-                picturesContainer.addEventListener('transitionend', hideElement);
+                skyScreenshotStatsPicturesContainer.addEventListener('transitionend', hideElement);
             </script>
             <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer').style.opacity = '1'">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
@@ -154,6 +154,35 @@
                 <li class="zelfli">True/False Questions</li>
             </ul>
             <br>
+            <div
+                id="FullScreenFlashPicturesContainer"
+                style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
+                class="transition-opacity duration-300"
+                onclick="this.style.opacity = '0'"
+            >
+                <image-carousel width="min(85vh, 80vw)" styleClasses="dropShadow">
+                    <img src="/img/Flash/Admin_Quality65_Effort8.avif" alt="Admin page">
+                    <img src="/img/Flash/Viewer_Quality80_Effort8.avif" alt="Viewer page">
+                </image-carousel>
+            </div>
+            <script>
+                const flashPicturesContainer = document.getElementById('FullScreenFlashPicturesContainer');
+
+                function hideElement()
+                {
+                    if (flashPicturesContainer.style.opacity === '0')
+                    {
+                        flashPicturesContainer.style.visibility = 'hidden';
+                        flashPicturesContainer.style.opacity = "-1";
+                    }
+                }
+
+                flashPicturesContainer.addEventListener('transitionend', hideElement);
+            </script>
+            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenFlashPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenFlashPicturesContainer').style.opacity = '1'">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
+                Pictures
+            </button>
             <a href="./download.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download

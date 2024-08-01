@@ -70,8 +70,8 @@ class TopNavbar extends HTMLElement
     getButtonStyleClass(buttonRoute)
     {
         const currentPage = window.location.href.split("/").pop();
-        const activeButtonStyleClasses = "block py-2 pr-4 pl-3 text-xl text-white bg-sky-700 rounded md:bg-transparent md:text-navbar-blue md:p-0 underline underline-offset-4 decoration-4 transition-all";
-        const inactiveButtonStyleClasses = "block font-medium py-2 pr-4 pl-3 text-xl text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-sky-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 transition-all";
+        const activeButtonStyleClasses = "block py-2 pr-4 pl-3 text-xl text-white bg-sky-700 rounded-lg md:bg-transparent md:text-navbar-blue md:p-0 underline underline-offset-4 decoration-4 transition-all";
+        const inactiveButtonStyleClasses = "block font-medium py-2 pr-4 pl-3 text-xl text-gray-700 rounded-lg border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-sky-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 transition-all";
 
         return buttonRoute.includes(currentPage || "index.html") ? activeButtonStyleClasses : inactiveButtonStyleClasses; //When the user initially navigates to our website, the URL doesn't contain any "html page". It's just the domain name `example.com`. In that case the `currentPage` variable would be an empty string, even though the user is actually on the index.html page. Hence why we default to `index.html` in the event that `currentPage` is an empty string.
     }

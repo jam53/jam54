@@ -52,40 +52,6 @@ hr {
   padding: 0;
 }
 
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -144,14 +110,14 @@ body {
 }
 
 .root {
-    max-width: 1050px;
+    max-width: 65.5em;
     margin: 0 auto;
-    padding: 40px;
+    padding: 2.5em;
 }
 
 @layer base {
     h1 {
-        @apply text-slate-50 underline underline-offset-[15px] decoration-2 text-5xl font-bold mb-7 leading-snug
+        @apply text-slate-50 underline underline-offset-[0.325em] decoration-2 text-5xl font-bold mb-7 leading-snug
     }
 
     h2 {
@@ -163,14 +129,14 @@ body {
     }
 
     .blueToPurpleButton {
-        @apply p-10 text-white rounded-xl transition-all duration-500 bg-gradient-to-tl to-purple-600 via-blue-500 from-green-600 bg-size-200 bg-pos-0 hover:bg-pos-100
-        font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2
+        @apply p-10 text-white transition-all duration-500 bg-gradient-to-tl to-purple-600 via-blue-500 from-green-600 bg-size-200 bg-pos-0 hover:bg-pos-100
+        rounded-lg px-5 py-2.5 text-center mr-2 mb-2
         text-4xl font-light gap-1.5 my-3 justify-center inline-flex items-center
     }
 
     .whiteBorderButton {
-        @apply text-white hover:text-white border border-white hover:bg-white duration-300 focus:ring-4 focus:outline-none focus:ring-white font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-white dark:text-white dark:hover:text-black dark:hover:bg-white dark:focus:ring-blue-800
-        text-3xl font-thin gap-1.5 my-3 justify-center inline-flex items-center
+        @apply text-white hover:text-white border border-white hover:bg-white duration-300 focus:ring-4 focus:outline-none focus:ring-white px-5 py-2.5 text-center mr-2 mb-2 dark:border-white dark:text-white dark:hover:text-black dark:hover:bg-white dark:focus:ring-blue-800
+        text-3xl rounded-lg font-thin gap-1.5 my-3 justify-center inline-flex items-center
     }
 
     .whiteShadowBold {
@@ -183,6 +149,10 @@ body {
 
     .zelfli {
         @apply text-white text-2xl font-extralight
+    }
+
+    .zelful .zelful .zelfli {
+        margin-left: 3em;
     }
 
     .cutout-text-container {
@@ -231,10 +201,10 @@ em {
 
 blockquote {
     margin: 0;
-    padding: 5px 10px 5px 15px;
+    padding: 0.25em 1em;
     background: var(--box-background-color);
-    border-radius: 5px;
-    border-left: 3px solid var(--tertiary-color);
+    border-radius: 0.35em;
+    border-left: 0.2em solid var(--tertiary-color);
 }
 
 ul {
@@ -249,7 +219,7 @@ ul {
 .zelfli {
     list-style-type: disc;
     display: list-item;
-    margin-left: 50px;
+    margin-left: 2em;
     font-family: "Nunito Sans", sans-serif
 }
 
@@ -275,15 +245,15 @@ ul {
     background: white;
     color: black;
     font-weight: bold;
-    margin: 0px auto;
+    margin: 0 auto;
     width: 60%;
-    padding: 10px;
+    padding: 0.75rem;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 6px;
+    border-radius: 0.4rem;
     mix-blend-mode: screen;
 }
 @media only screen and (max-width: 1100px) {
@@ -325,180 +295,6 @@ ul {
    --offset: 0px; /*calc(-1 * var(--blur));*/
    object-fit: cover;
    filter: blur(var(--blur));
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.invisible,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
-
-/*
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
 }
 
 .animated-element {

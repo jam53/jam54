@@ -43,30 +43,46 @@
                 Each world is based around a certain theme and has its own unique intractable objects such as trampolines, falling spikes, enemies, turrets and much more. Along the way, the adventurer can collect various items which can be used to purchase new packages and accessories.
             </p>
 
-            <button id="astroRunMediaDropdownButton" class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('astroRunMediaButtonsHolder').style.removeProperty('display'); this.style.display = 'none'">
+            <button id="astroRunMediaDropdownButton" data-dropdown-toggle="dropdown-astrorun-media" class="whiteBorderButton dropShadow animated-element" style="width: 100%" data-dropdown-triggertype="hover"
+                    onclick="
+                    document.getElementById('dropdown-astrorun-media').style.width = `${this.getBoundingClientRect().width}px`;
+                    document.getElementById('dropdown-astrorun-media').style.maxHeight = `20em`; // By setting the max-height to 20em, we override the default max-height of this element which is 0. Combined with the transition property in the element's CSS, this creates a smooth intro animation when the dropdown is expanded.
+                    ">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
                 Media
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="1em" width="1em" style="position: absolute; right: 0.25em">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
             </button>
-            <div id="astroRunMediaButtonsHolder" class="mb-2" style="display: none">
-                <button class="whiteBorderButton dropShadow m-0" style="width: 100%;" onclick="document.getElementById('astroRunMediaDropdownButton').style.removeProperty('display'); document.getElementById('astroRunMediaButtonsHolder').style.display = 'none'">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
-                    Media
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="1em" width="1em" style="position: absolute; right: 0.25em">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
-                    </svg>
-                </button>
-                <a href="https://www.youtube.com/watch?v=BgA4Y9DwvOE&list=PLHruLsU8WUD7LtQZtPg9GZBAuOpLTU_nV&index=4" class="whiteBorderButton dropShadow m-0" style="width: 100%; border-top: none; border-bottom: dashed 1px white">
-                    Video
-                </a>
-                <button class="whiteBorderButton dropShadow m-0" style="width: 100%; border-top: none; border-bottom: dashed 1px white" onclick="document.getElementById('FullScreenAstroRunPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenAstroRunPicturesContainer').style.opacity = '1'">
-                    Pictures
-                </button>
-                <button class="whiteBorderButton dropShadow m-0" style="width: 100%; border-top: none" onclick="document.getElementById('FullScreenAstroRunLeaderboardsContainer').style.visibility = 'visible';document.getElementById('FullScreenAstroRunLeaderboardsContainer').style.opacity = '1'">
-                    Leaderboards
-                </button>
+
+            <div id="dropdown-astrorun-media" class="z-10 rounded-lg dark:bg-box-background-color dropShadow overflow-hidden" style="max-height: 0; transition: 0.5s max-height">
+                <ul class="py-2 text-lg dark:text-gray-200">
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=BgA4Y9DwvOE&list=PLHruLsU8WUD7LtQZtPg9GZBAuOpLTU_nV&index=4" class="text-center cursor-pointer text-white font-normal block px-4 py-2 dark:hover:bg-secondary-background-color dark:hover:text-white transition">
+                            Videos
+                        </a>
+                    </li>
+                    <li>
+                        <button class="w-full px-4 py-2 dark:hover:bg-secondary-background-color dark:hover:text-white transition"
+                                onclick="
+                                    document.getElementById('FullScreenAstroRunPicturesContainer').style.visibility = 'visible';
+                                    document.getElementById('FullScreenAstroRunPicturesContainer').style.opacity = '1'
+                                "
+                        >
+                            Pictures
+                        </button>
+                    </li>
+                    <li>
+                        <button class="w-full px-4 py-2 dark:hover:bg-secondary-background-color dark:hover:text-white transition"
+                                onclick="
+                                    document.getElementById('FullScreenAstroRunLeaderboardsContainer').style.visibility = 'visible';
+                                    document.getElementById('FullScreenAstroRunLeaderboardsContainer').style.opacity = '1'
+                                "
+                        >
+                            Leaderboards
+                        </button>
+                    </li>
+                </ul>
             </div>
 
             <div

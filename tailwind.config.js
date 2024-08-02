@@ -9,8 +9,11 @@ module.exports = {
         extend: {
             colors: {
                 'navbar-blue': '#2196f3',
-                'zelf-background-color': '#282a2e',
                 'lightgrey-blue': '#4e86b0',
+                'secondary-color': 'var(--secondary-color)',
+                'secondary-background-color': 'var(--secondary-background-color)',
+                'third-background-color': 'var(--third-background-color)',
+                'box-background-color': 'var(--box-background-color)'
             },
             backgroundSize: {
                 'size-200': '200% 200%',

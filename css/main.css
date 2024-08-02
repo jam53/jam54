@@ -58,12 +58,9 @@ hr {
 :root {
     --main-color: #5865F2;
     --secondary-color: #98aae7;
-    --secondary-color-r: 114;
-    --secondary-color-g: 137;
-    --secondary-color-b: 218;
     --tertiary-color: #708aef;
     --background-color: rgb(40, 42, 46);
-    --secondary-background-color: rgb(45, 47, 51);
+    --secondary-background-color: rgb(72, 72, 80);
     --accent-background-color: rgb(37, 38, 41);
     --third-background-color: rgb(32, 34, 37);
     --box-background-color: rgb(53, 53, 58);

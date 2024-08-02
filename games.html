@@ -94,7 +94,6 @@
                     id="FullScreenAstroRunPicturesContainer"
                     class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
                     style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
-                    onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow rounded-lg">
                     <img src="/img/AstroRun/Level4WaterBox_Effort6_Quality_85.webp" alt="Level 4 water box">
@@ -113,6 +112,9 @@
             <script>
                 const astroRunPicturesContainer = document.getElementById('FullScreenAstroRunPicturesContainer');
 
+                astroRunPicturesContainer.addEventListener("click", e => astroRunPicturesContainer.style.opacity = 0);
+                document.addEventListener("keydown", e => e.key === "Escape" && (astroRunPicturesContainer.style.opacity = 0));
+
                 function hideElement()
                 {
                     if (astroRunPicturesContainer.style.opacity === '0')
@@ -129,7 +131,6 @@
                     id="FullScreenAstroRunLeaderboardsContainer"
                     class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
                     style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
-                    onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(45vh, 70vw)" styleClasses="dropShadow rounded-lg">
                     <img src="/img/AstroRun/Leaderboards/Level1_Effort6_Quality_85.webp" alt="Level 1 leaderboard">
@@ -147,6 +148,9 @@
             </div>
             <script>
                 const leaderboardsContainer = document.getElementById('FullScreenAstroRunLeaderboardsContainer');
+
+                leaderboardsContainer.addEventListener("click", e => leaderboardsContainer.style.opacity = 0);
+                document.addEventListener("keydown", e => e.key === "Escape" && (leaderboardsContainer.style.opacity = 0));
 
                 function hideElement()
                 {
@@ -219,7 +223,6 @@
                     id="FullScreenStelexoPicturesContainer"
                     class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
                     style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
-                    onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow">
                     <img src="/img/PatchnotesBackgrounds/StelexoPatchNotes.png" alt="Level 4 water box">
@@ -233,6 +236,9 @@
             </div>
             <script>
                 const stelexoPicturesContainer = document.getElementById('FullScreenStelexoPicturesContainer');
+
+                stelexoPicturesContainer.addEventListener("click", e => stelexoPicturesContainer.style.opacity = 0);
+                document.addEventListener("keydown", e => e.key === "Escape" && (stelexoPicturesContainer.style.opacity = 0));
 
                 function hideElement()
                 {
@@ -279,7 +285,6 @@
                     id="FullScreenSmashAndFlyPicturesContainer"
                     class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
                     style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
-                    onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow">
                     <img src="/img/SmashAndFly/BrokenGlass_Quality75_Effort10.avif" alt="Broken glass">
@@ -288,6 +293,9 @@
             </div>
             <script>
                 const smashAndFlyPicturesContainer = document.getElementById('FullScreenSmashAndFlyPicturesContainer');
+
+                smashAndFlyPicturesContainer.addEventListener("click", e => smashAndFlyPicturesContainer.style.opacity = 0);
+                document.addEventListener("keydown", e => e.key === "Escape" && (smashAndFlyPicturesContainer.style.opacity = 0));
 
                 function hideElement()
                 {

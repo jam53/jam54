@@ -162,10 +162,29 @@
                 Patch Notes
             </a>
 
-            <a href="https://jamhorn.github.io/Jam54Launcher/7/resources/AstroRun.apk" target="_blank" class="whiteBorderButton dropShadow animated-element w-full">
+            <button data-popover-target="popover-astrorun-download" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
-            </a>
+            </button>
+
+            <div data-popover id="popover-astrorun-download" role="tooltip" class="absolute z-10 invisible inline-block w-72 transition-opacity duration-300 border rounded-lg shadow-sm opacity-0 dark:border-secondary-background-color dark:bg-third-background-color dropShadow">
+                <div class="px-3 py-2 border-b rounded-t-lg dark:border-secondary-color dark:bg-box-background-color">
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white text-center">
+                        Choose a download option
+                    </h3>
+                </div>
+                <div class="px-3 py-2">
+                    <a href="https://jamhorn.github.io/Jam54Launcher/7/resources/AstroRun.apk" target="_blank" class="inline-flex items-center justify-center w-full px-5 py-2 me-2 text-base font-medium text-gray-900 border rounded-lg focus:outline-none focus:z-10 focus:ring-4 mb-2 dark:focus:ring-gray-700 dark:bg-box-background-color dark:text-gray-400 dark:border-secondary-background-color dark:hover:text-white dark:hover:bg-secondary-background-color transition duration-300">
+                        <svg class="w-7 h-7 me-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1274.37 718"><path class="cls-1" d="M930.77,536.42a53.07,53.07,0,1,1,53.06-53.08,53.14,53.14,0,0,1-53.06,53.08m-586.54,0a53.07,53.07,0,1,1,53.06-53.08,53.13,53.13,0,0,1-53.06,53.08M949.8,216.77,1055.85,33.09A22.06,22.06,0,1,0,1017.64,11L910.25,197c-82.12-37.48-174.35-58.35-272.76-58.35S446.86,159.55,364.74,197L257.36,11a22.06,22.06,0,1,0-38.22,22.06L325.2,216.77C143.09,315.82,18.53,500.18.31,718H1274.69c-18.24-217.82-142.79-402.18-324.89-501.23"/></svg>
+                        Direct download
+                    </a>
+                    <a href="./download.html" type="button" class="inline-flex items-center justify-center w-full px-5 py-2 me-2 text-base font-medium text-gray-900 border rounded-lg focus:outline-none focus:z-10 focus:ring-4 dark:focus:ring-gray-700 dark:bg-box-background-color dark:text-gray-400 dark:border-secondary-background-color dark:hover:text-white dark:hover:bg-secondary-background-color transition duration-300">
+                        <img class="w-8 h-8 me-3" style="filter: drop-shadow(0px 1000px 0 currentColor); transform: translateY(-1000px);" src="img/Jam54Launcher/Jam54LogoMonochrome_Quality45_Effort9.avif" alt="Monochrome Jam54 Logo">
+                        Download via <br>
+                        Jam54 Launcher
+                    </a>
+                </div>
+            </div>
         </div>
 
 

@@ -74,10 +74,29 @@
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
                 Pictures
             </button>
-            <a href="./download.html" class="whiteBorderButton dropShadow animated-element w-full">
+
+            <button data-popover-target="popover-astrorun-download" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
-            </a>
+            </button>
+            <div data-popover id="popover-astrorun-download" role="tooltip" class="absolute z-10 invisible inline-block w-72 transition-opacity duration-300 border rounded-lg shadow-sm opacity-0 dark:border-secondary-background-color dark:bg-third-background-color dropShadow">
+                <div class="px-3 py-2 border-b rounded-t-lg dark:border-secondary-color dark:bg-box-background-color">
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white text-center">
+                        Choose a download option
+                    </h3>
+                </div>
+                <div class="px-3 py-2">
+                    <a href="https://github.com/jam53/Takma/releases/latest" class="inline-flex items-center justify-center w-full px-5 py-2 me-2 text-base font-medium text-gray-900 border rounded-lg focus:outline-none focus:z-10 focus:ring-4 mb-2 dark:focus:ring-gray-700 dark:bg-box-background-color dark:text-gray-400 dark:border-secondary-background-color dark:hover:text-white dark:hover:bg-secondary-background-color transition duration-300">
+                        <svg class="w-6 h-6 me-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4875 4875"><path d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564"/></svg>
+                        Direct download
+                    </a>
+                    <a href="./download.html" type="button" class="inline-flex items-center justify-center w-full px-5 py-2 me-2 text-base font-medium text-gray-900 border rounded-lg focus:outline-none focus:z-10 focus:ring-4 dark:focus:ring-gray-700 dark:bg-box-background-color dark:text-gray-400 dark:border-secondary-background-color dark:hover:text-white dark:hover:bg-secondary-background-color transition duration-300">
+                        <img class="w-8 h-8 me-3" style="filter: drop-shadow(0px 1000px 0 currentColor); transform: translateY(-1000px);" src="img/Jam54Launcher/Jam54LogoMonochrome_Quality45_Effort9.avif" alt="Monochrome Jam54 Logo">
+                        Download via <br>
+                        Jam54 Launcher
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="grid place-items-center hidden lg:block">

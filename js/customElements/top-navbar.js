@@ -14,7 +14,7 @@ class TopNavbar extends HTMLElement
     {
         //region HTML
         this.innerHTML = `
-            <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5" style="background: var(--box-background-color)">
+            <nav class="px-2 sm:px-4 py-2.5 bg-box-background-color">
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
                     <a href="./index.html" class="flex items-center">
                         <img src="${jam54Logo}" class="mr-3 h-6 sm:h-9" alt="Jam54 Logo">

@@ -27,9 +27,9 @@
 
 <div id="root" class="root">
     <div class="grid lg:grid-cols-2 gap-1">
-        <div style="background: transparent" class="grid place-items-center hidden lg:block">
-            <div style="background: url('img/AppLogos/TakmaBackground.svg') no-repeat center; background-size: cover; display: flex; justify-content: center; height: 100%" class="grid place-items-center hidden lg:block rounded-tl-lg">
-                <img class="rounded-tl-lg object-cover" style="width: 80%" src="img/AppLogos/TakmaForeground.svg" alt="Takma Logo">
+        <div class="place-items-center hidden lg:block">
+            <div class="place-items-center lg:block rounded-tl-lg justify-center h-full" style="background: url('img/AppLogos/TakmaBackground.svg') center; background-size: cover; display: flex;">
+                <img class="rounded-tl-lg object-cover w-4/5" src="img/AppLogos/TakmaForeground.svg" alt="Takma Logo">
             </div>
         </div>
         <div id="takma" class="bg-lightgrey-blue p-7 rounded-t-lg lg:rounded-tl-none lg:rounded-tr-lg">
@@ -45,8 +45,8 @@
             <br>
             <div
                  id="FullScreenTakmaPicturesContainer"
-                 style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
-                 class="transition-opacity duration-300"
+                 class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
+                 style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
                  onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow rounded-lg">
@@ -70,18 +70,18 @@
 
                 takmaPicturesContainer.addEventListener('transitionend', hideElement);
             </script>
-            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenTakmaPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenTakmaPicturesContainer').style.opacity = '1'">
+            <button class="whiteBorderButton dropShadow animated-element w-full" onclick="document.getElementById('FullScreenTakmaPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenTakmaPicturesContainer').style.opacity = '1'">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
                 Pictures
             </button>
-            <a href="./download.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./download.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
             </a>
         </div>
 
-        <div style="background: transparent" class="grid place-items-center hidden lg:block">
-            <img class="object-cover" style="height: 100%" src="img/AppLogos/SkyCotlLogo.jpg" alt="Sky Screenshot Stats Logo">
+        <div class="grid place-items-center hidden lg:block">
+            <img class="object-cover h-full" src="img/AppLogos/SkyCotlLogo.jpg" alt="Sky Screenshot Stats Logo">
         </div>
         <div id="skyscreenshotstats" class="bg-lightgrey-blue p-7">
             <h1 class="animated-element">
@@ -93,8 +93,8 @@
             <br>
             <div
                 id="FullScreenSkyScreenshotStatsPicturesContainer"
-                style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
-                class="transition-opacity duration-300"
+                class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
+                style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
                 onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow rounded-lg">
@@ -121,11 +121,11 @@
 
                 skyScreenshotStatsPicturesContainer.addEventListener('transitionend', hideElement);
             </script>
-            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer').style.opacity = '1'">
+            <button class="whiteBorderButton dropShadow animated-element w-full" onclick="document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenSkyScreenshotStatsPicturesContainer').style.opacity = '1'">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
                 Pictures
             </button>
-            <a href="https://jam53.github.io/sky-screenshot-stats/" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="https://jam53.github.io/sky-screenshot-stats/" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 18 18">
                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
@@ -134,8 +134,8 @@
             </a>
         </div>
 
-        <div style="background: transparent" class="grid place-items-center hidden lg:block">
-            <img class="object-cover" style="height: 100%" src="img/AppLogos/Flash.svg" alt="Flash Logo">
+        <div class="place-items-center hidden lg:block">
+            <img class="object-cover h-full" src="img/AppLogos/Flash.svg" alt="Flash Logo">
         </div>
         <div id="flash" class="bg-lightgrey-blue p-7">
             <h1 class="animated-element">
@@ -156,8 +156,8 @@
             <br>
             <div
                 id="FullScreenFlashPicturesContainer"
-                style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
-                class="transition-opacity duration-300"
+                class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
+                style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
                 onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(85vh, 80vw)" styleClasses="dropShadow">
@@ -179,18 +179,18 @@
 
                 flashPicturesContainer.addEventListener('transitionend', hideElement);
             </script>
-            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenFlashPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenFlashPicturesContainer').style.opacity = '1'">
+            <button class="whiteBorderButton dropShadow animated-element w-full" onclick="document.getElementById('FullScreenFlashPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenFlashPicturesContainer').style.opacity = '1'">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
                 Pictures
             </button>
-            <a href="./download.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./download.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
             </a>
         </div>
 
-        <div style="background: #ececec; padding: 0 2em" class="grid place-items-center hidden lg:block">
-            <img class="object-cover" style="height: 100%; filter: invert(1); object-fit: contain" src="img/AppLogos/ImageSearcher.png" alt="ImageSearcher Logo">
+        <div style="background: #ececec" class="place-items-center hidden lg:block px-8">
+            <img class="h-full object-contain invert" src="img/AppLogos/ImageSearcher.png" alt="ImageSearcher Logo">
         </div>
         <div id="imagesearcher" class="bg-lightgrey-blue p-7">
             <h1 class="animated-element">
@@ -200,18 +200,18 @@
                 ImageSearcher is written in C# and searches for a certain image inside a video. Once the image is found, the program outputs the timestamps at which the image was found.
             </p>
             <br>
-            <a href="https://youtu.be/-p1rkt8zxvk" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="https://youtu.be/-p1rkt8zxvk" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" clip-rule="evenodd" /></svg>
                 Watch Example
             </a>
-            <a href="./download.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./download.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
             </a>
         </div>
 
-        <div style="background: transparent" class="grid place-items-center hidden lg:block">
-            <img class="object-cover" style="height: 100%; object-fit: contain" src="img/AppLogos/AutoEditor.png" alt="AutoEditor Logo">
+        <div class="place-items-center hidden lg:block">
+            <img class="h-full object-contain" src="img/AppLogos/AutoEditor.png" alt="AutoEditor Logo">
         </div>
         <div id="autoeditor" class="bg-lightgrey-blue p-7">
             <h1 class="animated-element">
@@ -221,18 +221,18 @@
                 AutoEditor, is written in C# and automatically edits videos, using image detection.
             </p>
             <br>
-            <a href="https://youtu.be/s26Tq07oLmo" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="https://youtu.be/s26Tq07oLmo" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" clip-rule="evenodd" /></svg>
                 Watch Example
             </a>
-            <a href="./download.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./download.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
             </a>
         </div>
 
-        <div style="background: #f0f0f0; padding: 2em" class="grid place-items-center hidden lg:block">
-            <img class="object-cover" style="width: 100%" src="img/AppLogos/DGCTimer.png" alt="DGCTimer Logo">
+        <div style="background: #f0f0f0" class="place-items-center hidden lg:block p-8">
+            <img class="object-cover w-full" src="img/AppLogos/DGCTimer.png" alt="DGCTimer Logo">
         </div>
         <div id="dgctimer" class="bg-lightgrey-blue p-7">
             <h1 class="animated-element">
@@ -242,14 +242,14 @@
                 DGCTimer, is written in C# and counts down from a given amount of minutes and seconds. It is also able to play a sound when the timer ends.
             </p>
             <br>
-            <a href="./download.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./download.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
             </a>
         </div>
 
-        <div style="background: white; padding: 1em" class="grid place-items-center hidden lg:block">
-            <img class="object-cover" style="width: 100%" src="img/AppLogos/WToI.png" alt="WToI Logo">
+        <div class="place-items-center hidden lg:block bg-white p-4">
+            <img class="object-cover w-full" src="img/AppLogos/WToI.png" alt="WToI Logo">
         </div>
         <div id="wtoi" class="bg-lightgrey-blue p-7">
             <h1 class="animated-element">
@@ -259,14 +259,14 @@
                 WToI, is written in Python and manipulates a given string. IToW is used to demanipulate the string.
             </p>
             <br>
-            <a href="./download.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./download.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
             </a>
         </div>
 
-        <div style="background: white; padding: 1em" class="grid place-items-center rounded-bl-lg hidden lg:block">
-            <img class="object-cover rounded-bl-lg" style="width: 100%" src="img/AppLogos/IToW.png" alt="IToW Logo">
+        <div class="place-items-center rounded-bl-lg hidden lg:block bg-white p-4">
+            <img class="object-cover rounded-bl-lg w-full" src="img/AppLogos/IToW.png" alt="IToW Logo">
         </div>
         <div id="itow" class="bg-lightgrey-blue p-7 rounded-b-lg lg:rounded-bl-none lg:rounded-br-lg">
             <h1 class="animated-element">
@@ -276,7 +276,7 @@
                 IToW, is written in Python and demanipulates a given string. WToI is used to manipulate the string.
             </p>
             <br>
-            <a href="./download.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./download.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
             </a>

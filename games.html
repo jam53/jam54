@@ -43,14 +43,14 @@
                 Each world is based around a certain theme and has its own unique intractable objects such as trampolines, falling spikes, enemies, turrets and much more. Along the way, the adventurer can collect various items which can be used to purchase new packages and accessories.
             </p>
 
-            <button id="astroRunMediaDropdownButton" data-dropdown-toggle="dropdown-astrorun-media" class="whiteBorderButton dropShadow animated-element" style="width: 100%" data-dropdown-triggertype="hover"
+            <button id="astroRunMediaDropdownButton" data-dropdown-toggle="dropdown-astrorun-media" class="whiteBorderButton dropShadow animated-element w-full" data-dropdown-triggertype="hover"
                     onclick="
                     document.getElementById('dropdown-astrorun-media').style.width = `${this.getBoundingClientRect().width}px`;
                     document.getElementById('dropdown-astrorun-media').style.maxHeight = `20em`; // By setting the max-height to 20em, we override the default max-height of this element which is 0. Combined with the transition property in the element's CSS, this creates a smooth intro animation when the dropdown is expanded.
                     ">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
                 Media
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="1em" width="1em" style="position: absolute; right: 0.25em">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="1em" width="1em" class="absolute right-2.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
             </button>
@@ -87,8 +87,8 @@
 
             <div
                     id="FullScreenAstroRunPicturesContainer"
-                    style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
-                    class="transition-opacity duration-300"
+                    class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
+                    style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
                     onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow rounded-lg">
@@ -122,8 +122,8 @@
 
             <div
                     id="FullScreenAstroRunLeaderboardsContainer"
-                    style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
-                    class="transition-opacity duration-300"
+                    class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
+                    style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
                     onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(45vh, 70vw)" styleClasses="dropShadow rounded-lg">
@@ -155,14 +155,14 @@
                 leaderboardsContainer.addEventListener('transitionend', hideElement);
             </script>
 
-            <a href="./astrorun-patchnotes.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./astrorun-patchnotes.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                 </svg>
                 Patch Notes
             </a>
 
-            <a href="https://jamhorn.github.io/Jam54Launcher/7/resources/AstroRun.apk" target="_blank" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="https://jamhorn.github.io/Jam54Launcher/7/resources/AstroRun.apk" target="_blank" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
             </a>
@@ -193,8 +193,8 @@
 
             <div
                     id="FullScreenStelexoPicturesContainer"
-                    style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
-                    class="transition-opacity duration-300"
+                    class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
+                    style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
                     onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow">
@@ -221,27 +221,27 @@
 
                 stelexoPicturesContainer.addEventListener('transitionend', hideElement);
             </script>
-            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenStelexoPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenStelexoPicturesContainer').style.opacity = '1'">
+            <button class="whiteBorderButton dropShadow animated-element w-full" onclick="document.getElementById('FullScreenStelexoPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenStelexoPicturesContainer').style.opacity = '1'">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
                 Pictures
             </button>
 
-            <a href="./stelexo-patchnotes.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./stelexo-patchnotes.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                 </svg>
                 Patch Notes
             </a>
 
-            <a href="./download.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./download.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
             </a>
         </div>
 
 
-        <div style="background: transparent" class="grid place-items-center hidden lg:block">
-            <img class="rounded-bl-lg object-cover" style="height: 100%" src="img/AppLogos/SmashAndFly.png" alt="Smash&Fly Logo">
+        <div class="place-items-center hidden lg:block">
+            <img class="rounded-bl-lg object-cover h-full" src="img/AppLogos/SmashAndFly.png" alt="Smash&Fly Logo">
         </div>
         <div id="smash&fly" class="bg-lightgrey-blue rounded-b-lg lg:rounded-bl-none lg:rounded-br-lg p-7">
             <h1 class="animated-element">
@@ -253,8 +253,8 @@
 
             <div
                     id="FullScreenSmashAndFlyPicturesContainer"
-                    style="width: 100vw; height: 100vh; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; z-index: 51; visibility: hidden; backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5); opacity: 0"
-                    class="transition-opacity duration-300"
+                    class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-[51] invisible opacity-0 back dark:bg-bl"
+                    style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
                     onclick="this.style.opacity = '0'"
             >
                 <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow">
@@ -276,19 +276,19 @@
 
                 smashAndFlyPicturesContainer.addEventListener('transitionend', hideElement);
             </script>
-            <button class="whiteBorderButton dropShadow animated-element" style="width: 100%;" onclick="document.getElementById('FullScreenSmashAndFlyPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenSmashAndFlyPicturesContainer').style.opacity = '1'">
+            <button class="whiteBorderButton dropShadow animated-element w-full" onclick="document.getElementById('FullScreenSmashAndFlyPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenSmashAndFlyPicturesContainer').style.opacity = '1'">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
                 Pictures
             </button>
 
-            <a href="./smashandfly-patchnotes.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./smashandfly-patchnotes.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                 </svg>
                 Patch Notes
             </a>
 
-            <a href="./download.html" class="whiteBorderButton dropShadow animated-element" style="width: 100%;">
+            <a href="./download.html" class="whiteBorderButton dropShadow animated-element w-full">
                 <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download
             </a>

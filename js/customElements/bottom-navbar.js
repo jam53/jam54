@@ -11,7 +11,7 @@ class BottomNavbar extends HTMLElement
     connectedCallback()
     {
         this.innerHTML = `
-            <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800" style="position: fixed; z-index: 50; bottom: 0; width: 100%; overflow: hidden; background: var(--box-background-color)">
+            <footer class="p-4 bg-white sm:p-6 fixed z-50 bottom-0 w-full overflow-hidden dark:bg-box-background-color">
                 <div class="sm:flex sm:items-center sm:justify-between">
                     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2018 - ${new Date().getFullYear()}, <em>Jam54</em>. All Rights Reserved.
                     </span>

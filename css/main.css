@@ -150,6 +150,7 @@ body {
 
     .zelful .zelful .zelfli {
         margin-left: 3em;
+        list-style-type: circle;
     }
 
     .cutout-text-container {

@@ -16,12 +16,12 @@ class TopNavbar extends HTMLElement
         this.innerHTML = `
             <nav class="px-2 sm:px-4 py-2.5 bg-box-background-color">
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
-                    <a href="./index.html" class="flex items-center">
+                    <a href="/" class="flex items-center">
                         <img src="${jam54Logo}" class="mr-3 h-6 sm:h-9" alt="Jam54 Logo">
                         <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Jam54</span>
                     </a>
                     <div class="flex md:order-2">
-                        <a href="./download.html" class="text-lg text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all">Download</a>
+                        <a href="/download" class="text-lg text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all">Download</a>
                         <button id="hamburger" data-collapse-toggle="mobile-menu-4" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-4" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -31,16 +31,16 @@ class TopNavbar extends HTMLElement
                     <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
                         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                             <li>
-                                <a href="./index.html" class="${this.getButtonStyleClass("index.html")}" aria-current="page">Home</a>
+                                <a href="/" class="${this.getButtonStyleClass("/")}" aria-current="page">Home</a>
                             </li>
                             <li>
-                                <a href="./games.html" class="${this.getButtonStyleClass("games.html")}">Games</a>
+                                <a href="/games" class="${this.getButtonStyleClass("/games")}">Games</a>
                             </li>
                             <li>
-                                <a href="./programs.html" class="${this.getButtonStyleClass("programs.html")}">Programs</a>
+                                <a href="/programs" class="${this.getButtonStyleClass("/programs")}">Programs</a>
                             </li>
                             <li>
-                                <a href="./about.html" class="${this.getButtonStyleClass("about.html")}">About</a>
+                                <a href="/about" class="${this.getButtonStyleClass("/about")}">About</a>
                             </li>
                         </ul>
                     </div>
@@ -69,11 +69,11 @@ class TopNavbar extends HTMLElement
      */
     getButtonStyleClass(buttonRoute)
     {
-        const currentPage = window.location.href.split("/").pop();
+        const currentRoute = "/" + window.location.href.split("/").pop();
         const activeButtonStyleClasses = "block py-2 pr-4 pl-3 text-xl text-white bg-sky-700 rounded-lg md:bg-transparent md:text-navbar-blue md:p-0 underline underline-offset-4 decoration-4 transition-all";
         const inactiveButtonStyleClasses = "block font-medium py-2 pr-4 pl-3 text-xl text-gray-700 rounded-lg border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-sky-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 transition-all";
 
-        return buttonRoute.includes(currentPage || "index.html") ? activeButtonStyleClasses : inactiveButtonStyleClasses; //When the user initially navigates to our website, the URL doesn't contain any "html page". It's just the domain name `example.com`. In that case the `currentPage` variable would be an empty string, even though the user is actually on the index.html page. Hence why we default to `index.html` in the event that `currentPage` is an empty string.
+        return currentRoute === buttonRoute ? activeButtonStyleClasses : inactiveButtonStyleClasses;
     }
 }
 

@@ -10,11 +10,11 @@
     },
     "dependencies": {
         "flowbite": "^2.5.2",
-        "postcss": "^8.4.47",
-        "tailwindcss": "^3.4.14"
+        "postcss": "^8.4.49",
+        "tailwindcss": "^3.4.15"
     },
     "devDependencies": {
         "rimraf": "^6.0.1",
-        "vite": "^5.4.10"
+        "vite": "^6.0.1"
     }
 }

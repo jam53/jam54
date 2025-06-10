@@ -1,118 +1,100 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+@import 'tailwindcss';
 
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+@source '../node_modules/flowbite/**/*.js';
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --color-navbar-blue: #2196f3;
+    --color-lightgrey-blue: #4e86b0;
+    --color-secondary-color: var(--secondary-color);
+    --color-secondary-background-color: var(--secondary-background-color);
+    --color-third-background-color: var(--third-background-color);
+    --color-box-background-color: var(--box-background-color);
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+@layer utilities {
+    :root {
+        --main-color: #5865f2;
+        --secondary-color: #98aae7;
+        --tertiary-color: #708aef;
+        --background-color: rgb(40, 42, 46);
+        --secondary-background-color: rgb(72, 72, 80);
+        --accent-background-color: rgb(37, 38, 41);
+        --third-background-color: rgb(32, 34, 37);
+        --box-background-color: rgb(53, 53, 58);
+    }
 
-::-moz-selection {
-  background: #91b2d3;
-  text-shadow: none;
-}
+    ::selection {
+        background: #91b2d3;
+        text-shadow: none;
+    }
 
-::selection {
-  background: #91b2d3;
-  text-shadow: none;
-}
+    hr {
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+    }
 
-/*
- * A better looking default horizontal rule
- */
+    @font-face {
+        font-family: 'Rubik';
+        src: url('../fonts/Rubik/static/Rubik-Regular.ttf');
+    }
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
+    @font-face {
+        font-family: 'Rubik';
+        src: url('../fonts/Rubik/static/Rubik-Light.ttf');
+        font-weight: 300;
+    }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-:root {
-    --main-color: #5865F2;
-    --secondary-color: #98aae7;
-    --tertiary-color: #708aef;
-    --background-color: rgb(40, 42, 46);
-    --secondary-background-color: rgb(72, 72, 80);
-    --accent-background-color: rgb(37, 38, 41);
-    --third-background-color: rgb(32, 34, 37);
-    --box-background-color: rgb(53, 53, 58);
-}
+    @font-face {
+        font-family: 'Nunito Sans';
+        src: url('../fonts/Nunito_Sans/NunitoSans-Regular.ttf');
+    }
 
-@font-face {
-    font-family: "Rubik";
-    src: url("../fonts/Rubik/static/Rubik-Regular.ttf");
-}
-@font-face {
-    font-family: "Rubik";
-    src: url("../fonts/Rubik/static/Rubik-Light.ttf");
-    font-weight: 300;
-}
-@font-face {
-    font-family: "Nunito Sans";
-    src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
-}
-@font-face {
-    font-family: "Nunito Sans";
-    src: url("../fonts/Nunito_Sans/NunitoSans-ExtraLight.ttf");
-    font-weight: 200;
-}
-@font-face {
-    font-family: "Nunito Sans";
-    src: url("../fonts/Nunito_Sans/NunitoSans-Light.ttf");
-    font-weight: 300;
-}
-@font-face {
-    font-family: "Nunito";
-    src: url("../fonts/Nunito/static/Nunito-Regular.ttf");
-}
-@font-face {
-    font-family: "Nunito";
-    src: url("../fonts/Nunito/static/Nunito-ExtraLight.ttf");
-}
-@font-face {
-    font-family: "Nunito";
-    src: url("../fonts/Nunito/static/Nunito-Light.ttf");
-}
-body {
-    background-color: var(--background-color);
-    font-family: Rubik, sans-serif;
-}
+    @font-face {
+        font-family: 'Nunito Sans';
+        src: url('../fonts/Nunito_Sans/NunitoSans-ExtraLight.ttf');
+        font-weight: 200;
+    }
 
-.root {
-    max-width: 65.5em;
-    margin: 0 auto;
-    padding: 2.5em;
+    @font-face {
+        font-family: 'Nunito Sans';
+        src: url('../fonts/Nunito_Sans/NunitoSans-Light.ttf');
+        font-weight: 300;
+    }
+
+    @font-face {
+        font-family: 'Nunito';
+        src: url('../fonts/Nunito/static/Nunito-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: 'Nunito';
+        src: url('../fonts/Nunito/static/Nunito-ExtraLight.ttf');
+    }
+
+    @font-face {
+        font-family: 'Nunito';
+        src: url('../fonts/Nunito/static/Nunito-Light.ttf');
+    }
+
+    body {
+        background-color: var(--background-color);
+        font-family: Rubik, sans-serif;
+    }
+
+    .root {
+        max-width: 65.5em;
+        margin: 0 auto;
+        padding: 2.5em;
+    }
 }
 
 @layer base {
+    * {
+        @apply focus-visible:outline-hidden focus-visible:ring-4 dark:focus-visible:ring-blue-800 focus-visible:ring-white;
+    }
+
     h1 {
         @apply text-slate-50 underline underline-offset-[0.325em] decoration-2 text-5xl font-bold mb-7 leading-snug
     }
@@ -126,14 +108,14 @@ body {
     }
 
     .blueToPurpleButton {
-        @apply p-10 text-white transition-all duration-500 bg-gradient-to-tl to-purple-600 via-blue-500 from-green-600 bg-size-200 bg-pos-0 hover:bg-pos-100
-        rounded-lg px-5 py-2.5 text-center mr-2 mb-2
-        text-4xl font-light gap-1.5 my-3 justify-center inline-flex items-center
+        @apply p-10 text-white transition-all duration-500 bg-size-[200%_200%] bg-position-[0%_0%] hover:bg-position-[100%_100%] rounded-lg px-5 py-2.5 text-center mr-2 mb-2 text-4xl font-light gap-1.5 my-3 justify-center inline-flex items-center;
+        background-image: linear-gradient(to top left, #16a34a, #3b82f6, #9333ea); /* green-600, blue-500, purple-600 */
+        background-repeat: no-repeat;
     }
 
+
     .whiteBorderButton {
-        @apply text-white hover:text-white border border-white hover:bg-white duration-300 focus:ring-4 focus:outline-none focus:ring-white px-5 py-2.5 text-center mr-2 mb-2 dark:border-white dark:text-white dark:hover:text-black dark:hover:bg-white dark:focus:ring-blue-800
-        text-3xl rounded-lg font-thin gap-1.5 my-3 justify-center inline-flex items-center
+        @apply text-white hover:text-white border border-white hover:bg-white duration-300 px-5 py-2.5 text-center mr-2 mb-2 dark:border-white dark:text-white dark:hover:text-black dark:hover:bg-white  text-3xl rounded-lg font-thin gap-1.5 my-3 justify-center inline-flex items-center cursor-pointer;
     }
 
     .whiteShadowBold {
@@ -160,6 +142,10 @@ body {
     .cutout-text {
         @apply text-4xl lg:text-8xl
     }
+
+    a {
+        @apply font-bold no-underline text-secondary-color
+    }
 }
 
 h1 {
@@ -181,14 +167,8 @@ blockquote p {
 }
 
 .whiteShadowBold {
-    text-shadow:rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
+    text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
     font-family: "Rubik", sans-serif;
-}
-
-a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: bold;
 }
 
 em {
@@ -223,8 +203,8 @@ ul {
 
 .dropShadow {
     text-shadow: 0 0 32px black;
-    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .3));
-    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .3));
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .3));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .3));
 }
 
 .whiteBorderButton {
@@ -254,6 +234,7 @@ ul {
     border-radius: 0.4rem;
     mix-blend-mode: screen;
 }
+
 @media only screen and (max-width: 1100px) {
     .cutout-text {
         width: 80%;
@@ -263,36 +244,36 @@ ul {
 /*https://codepen.io/MartijnCuppens/pen/NWNdOBR?editors=1100*/
 /*The image containers*/
 .img-container {
-   width: 100%;
-   position: relative;
-   overflow: hidden;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 /*Add a pseudo element to keep the aspect ratio*/
 .img-container::after {
-   content: "";
-   display: block;
-   /*padding-bottom: calc(900% / 16);*/
+    content: "";
+    display: block;
+    /*padding-bottom: calc(900% / 16);*/
 }
 
 /*Stretch the images over the container and keep them contained*/
 .img-container > * {
-   position: absolute;
-   top: var(--offset, 0);
-   left: var(--offset, 0);
-   width: calc(100% - 2 * var(--offset, 0px));
-   height: calc(100% - 2 * var(--offset, 0px));
-   object-fit: contain;
+    position: absolute;
+    top: var(--offset, 0);
+    left: var(--offset, 0);
+    width: calc(100% - 2 * var(--offset, 0px));
+    height: calc(100% - 2 * var(--offset, 0px));
+    object-fit: contain;
 }
 
 /*Blur the background image and cover the whole container*/
 /*Use the negative blur value as offset to prevent the blur*/
 /*from mixing with the document background color*/
 .img-blur {
-   --blur: 20px;
-   --offset: 0px; /*calc(-1 * var(--blur));*/
-   object-fit: cover;
-   filter: blur(var(--blur));
+    --blur: 20px;
+    --offset: 0px; /*calc(-1 * var(--blur));*/
+    object-fit: cover;
+    filter: blur(var(--blur));
 }
 
 .animated-element {

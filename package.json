@@ -9,9 +9,10 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@tailwindcss/vite": "^4.1.8",
         "flowbite": "^2.5.2",
         "postcss": "^8.4.49",
-        "tailwindcss": "^3.4.15"
+        "tailwindcss": "^4.1.8"
     },
     "devDependencies": {
         "rimraf": "^6.0.1",

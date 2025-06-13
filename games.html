@@ -279,6 +279,58 @@
 
 
         <div class="place-items-center hidden lg:block">
+            <img class="object-cover h-full" src="img/AppLogos/HoneyHorizonLogoQuality75Effort10.avif" alt="Honey Horizon Logo">
+        </div>
+        <div id="honeyhorizon" class="bg-lightgrey-blue p-7">
+            <a href="#honeyhorizon">
+                <h1 class="animated-element">
+                    Honey Horizon
+                </h1>
+            </a>
+            <p class="animated-element">
+                Honey Horizon was made for the GMTK 2024 game jam by a team of three people, around the theme "Built to Scale."
+            </p>
+
+            <div
+                    id="FullScreenHoneyHorizonPicturesContainer"
+                    class="transition-opacity duration-300 w-screen h-screen fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex justify-center items-center z-51 invisible opacity-0 back dark:bg-bl"
+                    style="backdrop-filter: blur(0.5em); background-color: rgba(0, 0, 0, 0.5)"
+            >
+                <image-carousel width="min(120vh, 80vw)" styleClasses="dropShadow">
+                    <img src="/img/HoneyHorizon/HoneyHorizonGameplayQuality70Effort10.avif" alt="Honey Horizon Gameplay">
+                    <img src="/img/HoneyHorizon/HoneyHorizonMenuQuality75Effort10.avif" alt="Honey Horizon Menu">
+                </image-carousel>
+            </div>
+            <script>
+                const honeyHorizonPicturesContainer = document.getElementById('FullScreenHoneyHorizonPicturesContainer');
+
+                honeyHorizonPicturesContainer.addEventListener("click", e => honeyHorizonPicturesContainer.style.opacity = 0);
+                document.addEventListener("keydown", e => e.key === "Escape" && (honeyHorizonPicturesContainer.style.opacity = 0));
+
+                function hideElement()
+                {
+                    if (honeyHorizonPicturesContainer.style.opacity === '0')
+                    {
+                        honeyHorizonPicturesContainer.style.visibility = 'hidden';
+                        honeyHorizonPicturesContainer.style.opacity = "-1";
+                    }
+                }
+
+                honeyHorizonPicturesContainer.addEventListener('transitionend', hideElement);
+            </script>
+            <button class="whiteBorderButton dropShadow animated-element w-full" onclick="document.getElementById('FullScreenHoneyHorizonPicturesContainer').style.visibility = 'visible';document.getElementById('FullScreenHoneyHorizonPicturesContainer').style.opacity = '1'">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path></svg>
+                Pictures
+            </button>
+
+            <a href="/download" class="whiteBorderButton dropShadow animated-element w-full">
+                <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download
+            </a>
+        </div>
+
+
+        <div class="place-items-center hidden lg:block">
             <img class="rounded-bl-lg object-cover h-full" src="img/AppLogos/SmashAndFly.png" alt="Smash&Fly Logo">
         </div>
         <div id="smash&fly" class="bg-lightgrey-blue rounded-b-lg lg:rounded-bl-none lg:rounded-br-lg p-7">

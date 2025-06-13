@@ -35,6 +35,17 @@ class ImageCarousel extends HTMLElement
         {
             this.adjustedHeight = true;
         }
+        
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft")
+            {
+                this.querySelector("[data-carousel-prev]")?.click();
+            }
+            else if (event.key === "ArrowRight")
+            {
+                this.querySelector("[data-carousel-next]")?.click();
+            }
+        });
     }
 
     calculateAndSetHeight(maxWidth)

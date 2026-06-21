@@ -20,5 +20,56 @@ export default defineConfig({
     base: "/",
     plugins: [
         tailwindcss(),
+        injectTagsIntoHead(),
+        injectTagsIntoBody(),
     ],
 })
+
+/**
+ * This function injects tags into the head of every HTML file in the project
+ */
+function injectTagsIntoHead() {
+    return {
+        name: "inject-into-head",
+        transformIndexHtml() {
+            return {
+                tags: [
+                    { tag: "meta", attrs: { charset: "utf-8" }, injectTo: "head" },
+                    { tag: "meta", attrs: { name: "description", content: "Software development and game development by jam54." }, injectTo: "head" },
+                    { tag: "meta", attrs: { name: "viewport", content: "width=device-width, initial-scale=1" }, injectTo: "head" },
+                    { tag: "meta", attrs: { name: "theme-color", content: "#fafafa" }, injectTo: "head" },
+
+                    { tag: "meta", attrs: { property: "og:title", content: "Jam54" }, injectTo: "head" },
+                    { tag: "meta", attrs: { property: "og:type", content: "website" }, injectTo: "head" },
+                    { tag: "meta", attrs: { property: "og:url", content: "jam54.com" }, injectTo: "head" },
+                    { tag: "meta", attrs: { property: "og:image", content: "./icon.png" }, injectTo: "head" },
+
+                    { tag: "link", attrs: { rel: "manifest", href: "site.webmanifest" }, injectTo: "head" },
+                    { tag: "link", attrs: { rel: "apple-touch-icon", href: "./icon.png" }, injectTo: "head" },
+                    { tag: "link", attrs: { rel: "icon", href: "favicon.ico", type: "image/x-icon" }, injectTo: "head" },
+                    { tag: "link", attrs: { rel: "shortcut icon", href: "favicon.ico", type: "image/x-icon" }, injectTo: "head" },
+
+                    { tag: "link", attrs: { rel: "stylesheet", href: "css/main.css" }, injectTo: "head" },
+                ]
+            };
+        }
+    }
+}
+
+/**
+ * This function injects tags into the <body> tag of every HTML file in the project
+ */
+function injectTagsIntoBody() {
+    return {
+        name: "inject-into-body",
+        transformIndexHtml() {
+            return {
+                tags: [
+                    { tag: "script", attrs: { type: "module", src: "js/index.js" }, injectTo: "body" },
+                    { tag: "script", attrs: { type: "module", src: "js/customElements/top-navbar.js" }, injectTo: "body" },
+                    { tag: "script", attrs: { type: "module", src: "js/customElements/bottom-navbar.js" }, injectTo: "body" },
+                ]
+            };
+        }
+    }
+}

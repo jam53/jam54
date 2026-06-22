@@ -50,6 +50,17 @@ function injectTagsIntoHead() {
                     { tag: "link", attrs: { rel: "shortcut icon", href: "favicon.ico", type: "image/x-icon" }, injectTo: "head" },
 
                     { tag: "link", attrs: { rel: "stylesheet", href: "css/main.css" }, injectTo: "head" },
+                    {
+                        tag: "script",
+                        attrs: {
+                            defer: true,
+                            src: "https://jam54-api.jam54.com/main.js",
+                            "data-host-url": "https://jam54-api.jam54.com/",
+                            "data-website-id": "07f62870-33ef-4ac3-b2e6-fd531df84517",
+                            "data-domains": "jam54.com,www.jam54.com",
+                        },
+                        injectTo: "head",
+                    },
                 ]
             };
         }

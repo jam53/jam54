@@ -1,8 +1,8 @@
-(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))l(t);new MutationObserver(t=>{for(const a of t)if(a.type==="childList")for(const o of a.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&l(o)}).observe(document,{childList:!0,subtree:!0});function e(t){const a={};return t.integrity&&(a.integrity=t.integrity),t.referrerPolicy&&(a.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?a.credentials="include":t.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function l(t){if(t.ep)return;t.ep=!0;const a=e(t);fetch(t.href,a)}})();const i=document.querySelectorAll(".animated-element"),n=new IntersectionObserver(s=>{let r=0;s.forEach(e=>{e.isIntersecting&&(e.intersectionRatio===1&&e.target.classList.add("quick"),setTimeout(()=>{e.target.classList.add("in-view"),setTimeout(()=>{e.target.classList.remove("animated-element"),e.target.classList.remove("quick"),e.target.classList.remove("in-view")},parseFloat(window.getComputedStyle(e.target).transitionDuration)*1e3)},r),r+=75,n.unobserve(e.target))})},{threshold:.3});i.forEach(s=>{n.observe(s)});const c="/assets/icon-BHDt0GB9.png";class d extends HTMLElement{constructor(){super()}connectedCallback(){this.innerHTML=`
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=document.querySelectorAll(`.animated-element`),t=new IntersectionObserver(e=>{let n=0;e.forEach(e=>{e.isIntersecting&&(e.intersectionRatio===1&&e.target.classList.add(`quick`),setTimeout(()=>{e.target.classList.add(`in-view`),setTimeout(()=>{e.target.classList.remove(`animated-element`),e.target.classList.remove(`quick`),e.target.classList.remove(`in-view`)},parseFloat(window.getComputedStyle(e.target).transitionDuration)*1e3)},n),n+=75,t.unobserve(e.target))})},{threshold:.3});e.forEach(e=>{t.observe(e)});var n=`/assets/icon-BHDt0GB9.png`,r=class extends HTMLElement{constructor(){super()}connectedCallback(){this.innerHTML=`
             <nav class="px-2 sm:px-4 py-2.5 bg-box-background-color">
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
                     <a href="/" class="flex items-center">
-                        <img src="${c}" class="mr-3 h-6 sm:h-9" alt="Jam54 Logo">
+                        <img src="${n}" class="mr-3 h-6 sm:h-9" alt="Jam54 Logo">
                         <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Jam54</span>
                     </a>
                     <div class="flex md:order-2">
@@ -16,22 +16,22 @@
                     <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
                         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                             <li>
-                                <a href="/" class="${this.getButtonStyleClass("/")}" aria-current="page">Home</a>
+                                <a href="/" class="${this.getButtonStyleClass(`/`)}" aria-current="page">Home</a>
                             </li>
                             <li>
-                                <a href="/games" class="${this.getButtonStyleClass("/games")}">Games</a>
+                                <a href="/games" class="${this.getButtonStyleClass(`/games`)}">Games</a>
                             </li>
                             <li>
-                                <a href="/programs" class="${this.getButtonStyleClass("/programs")}">Programs</a>
+                                <a href="/programs" class="${this.getButtonStyleClass(`/programs`)}">Programs</a>
                             </li>
                             <li>
-                                <a href="/about" class="${this.getButtonStyleClass("/about")}">About</a>
+                                <a href="/about" class="${this.getButtonStyleClass(`/about`)}">About</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        `,document.getElementById("hamburger").addEventListener("click",function(r){const e=document.getElementById("mobile-menu-4");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")})}getButtonStyleClass(r){return"/"+window.location.href.split("/").pop()===r?"block py-2 pr-4 pl-3 text-xl text-white bg-sky-700 rounded-lg md:bg-transparent md:text-navbar-blue md:p-0 underline underline-offset-4 decoration-4 transition-all":"block font-medium py-2 pr-4 pl-3 text-xl text-gray-700 rounded-lg border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-sky-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 transition-all"}}window.customElements.define("top-navbar",d);class u extends HTMLElement{constructor(){super()}connectedCallback(){this.innerHTML=`
+        `,document.getElementById(`hamburger`).addEventListener(`click`,function(e){let t=document.getElementById(`mobile-menu-4`);t.classList.contains(`hidden`)?t.classList.remove(`hidden`):t.classList.add(`hidden`)})}getButtonStyleClass(e){return`/`+window.location.href.split(`/`).pop()===e?`block py-2 pr-4 pl-3 text-xl text-white bg-sky-700 rounded-lg md:bg-transparent md:text-navbar-blue md:p-0 underline underline-offset-4 decoration-4 transition-all`:`block font-medium py-2 pr-4 pl-3 text-xl text-gray-700 rounded-lg border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-sky-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 transition-all`}};window.customElements.define(`top-navbar`,r);var i=class extends HTMLElement{constructor(){super()}connectedCallback(){this.innerHTML=`
             <footer class="p-4 bg-white sm:p-6 fixed z-50 bottom-0 w-full overflow-hidden dark:bg-box-background-color">
                 <div class="sm:flex sm:items-center sm:justify-between">
                     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2018 - ${new Date().getFullYear()}, <em>Jam54</em>. All Rights Reserved.
@@ -55,4 +55,4 @@
                     </div>
                 </div>
             </footer>
-        `}}window.customElements.define("bottom-navbar",u);
+        `}};window.customElements.define(`bottom-navbar`,i);
